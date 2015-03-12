@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site"
+	method="upgrade">
+	<name>Countdown Timer</name>
+	<author>J!Labs</author>
+	<creationDate>Oct 2013</creationDate>
+	<copyright>Copyright (C)2013 J!Labs . All rights unreserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>erwin@joomla-labs.com</authorEmail>
+	<authorUrl>www.joomla-labs.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Simple Countdown Timer module for Visia Joomla template</description>
+	<files>
+		<filename module="mod_countdown">mod_countdown.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+
+	<!--
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_maillist.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_maillist.sys.ini</language>
+	</languages>
+	-->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				
+				<field name="show_pretext" type="list" default="" label="Show Pre-Text" description="You might want to show pre text below the countdown timer">
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+				<field name="pretext" type="text" 
+					default="If you want to keep yourself informed on what we are up to why don't you subscibre to our newsletter. "
+					label="Pre-text" description="Fill in your preference pretext here" />
+				
+				<field name="lang_code" type="list" default="" label="Countdown Language" description="Choose from additional 49 languages. Default is English.">
+					<option value="none">Select Language</option>
+					<option value="ar">&#8235;العربية (Arabic)</option>
+					<option value="id">Bahasa Indonesia (Indonesian)</option>
+					<option value="ms">Bahasa Melayu (Malaysian)</option>
+					<option value="bn">বাংলা (Bengali/Bangla)</option>
+					<option value="nb">Bokmål (Norwegian)</option>
+					<option value="bs">Bosanski (Bosnian)</option>
+					<option value="bg">Български език (Bulgarian)</option>
+					<option value="ca">Català (Catalan)</option>
+					<option value="cs">Čeština (Czech)</option>
+					<option value="cy">Cymraeg (Welsh)</option>
+					<option value="da">Dansk (Danish)</option>
+					<option value="de">Deutsch (German)</option>
+					<option value="et">Eesti keel (Estonian)</option>
+					<option value="el">Ελληνικά (Greek)</option>
+					<option value="es">Español (Spanish)</option>
+					<option value="fa">&#8235;فارسی (Farsi/Persian)</option>
+					<option value="fr" selected="selected">Français (French)</option>
+					<option value="gl">Galego (Galician)</option>
+					<option value="sq">Gjuha shqipe (Albanian)</option>
+					<option value="gu">ગુજરાતી (Gujarati)</option>
+					<option value="ko">한국어 (Korean)</option>
+					<option value="he">&#8235;עברית (Hebrew)</option>
+					<option value="hr">Hrvatski jezik (Croatian)</option>
+					<option value="hy">Հայերեն (Armenian)</option>
+					<option value="it">Italiano (Italian)</option>
+					<option value="kn">ಕನ್ನಡ (Kannada)</option>
+					<option value="lv">Latviešu Valoda (Latvian)</option>
+					<option value="lt">Lietuvių kalba (Lithuanian)</option>
+					<option value="hu">Magyar (Hungarian)</option>
+					<option value="ml">മലയാളം (Malayalam)</option>
+					<option value="my">မြန်မာစာ (Burmese)</option>
+					<option value="nl">Nederlands (Dutch)</option>
+					<option value="ja">日本語 (Japanese)</option>
+					<option value="uz">O‘zbek tili (Uzbek)</option>
+					<option value="th">ภาษาไทย (Thai)</option>
+					<option value="pl">Polski (Polish)</option>
+					<option value="pt-BR">Português (Portuguese/Brazilian)</option>
+					<option value="ro">Română (Romanian)</option>
+					<option value="ru">Русский (Russian)</option>
+					<option value="sk">Slovenčina (Slovak)</option>
+					<option value="sl">Slovenščina (Slovenian)</option>
+					<option value="sr">Cрпски језик (Serbian)</option>
+					<option value="sr-SR">Srpski jezik (Serbian)</option>
+					<option value="fi">Suomi (Finnish)</option>
+					<option value="sv">Svenska (Swedish)</option>
+					<option value="vi">Tiếng Việt (Vietnamese)</option>
+					<option value="tr">Türkçe (Turkish)</option>
+					<option value="uk">українська мова (Ukrainian)</option>
+					<option value="zh-CN">简体中文 (Chinese/Simplified)</option>
+					<option value="zh-TW">繁體中文 (Chinese/Traditional)</option>
+				</field>
+
+				<field name="launchtime" type="text" label="Time to Countdown" default="8-5-2014" description="This is the date to countdown to. Please use folowing format:&lt;br /&gt; MONTH - DAY - YEAR" />
+				<!--
+				<field name="launchtime" type="calendar" format="%Y-%m-%d" label="Time to Countdown" description="Choose a time to countdown here"
+					size="22" filter="user_utc" />-->
+				
+				
+
+			</fieldset>
+			
+			<fieldset
+				name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="Module Class Suffix"
+					description="Module Class Suffix" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="Caching"
+					description="Select whether to cache the content of this module or not">
+					<option
+						value="1">Use global</option>
+					<option
+						value="0">No caching</option>
+				</field>
+				
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="Cache Time"
+					description="The time before the module is recached" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

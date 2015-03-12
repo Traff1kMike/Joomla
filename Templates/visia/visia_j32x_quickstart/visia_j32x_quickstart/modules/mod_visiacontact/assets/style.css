@@ -1,0 +1,4 @@
+/* test for Chrome issue in greedbegone.com */
+#contact-form {
+	position: inherit;
+}

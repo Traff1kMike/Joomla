@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>Visia</name>
+	<creationDate>Aug 2013</creationDate>
+	<author>Erwin Schro + AetherThemes</author>
+	<authorEmail>erwin@joomla-labs.com</authorEmail>
+	<authorUrl>http://www.joomla-labs.com</authorUrl>
+	<copyright>Copyright 2013 AetherThemes and Erwin Schro. All rights reserved</copyright>
+	<license>GPLv2</license>
+	<version>3.0.1</version>
+    <description>TPL_VISIA_XML_DESC</description>
+	<files>
+		<filename>component.php</filename>
+        <filename>error.php</filename>
+		<filename>favicon.ico</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>index.php</filename>
+		<filename>offline.php</filename>
+        <filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>assets</folder>
+		<folder>stylesheets</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>javascripts</folder>
+		<folder>language</folder>
+	</files>
+	<positions>
+		<position>menu</position>
+		<position>header</position>
+		<position>ticker</position>
+		<position>hero</position>
+		<position>top-a</position>
+		<position>top-b</position>
+		<position>top-c</position>
+		<position>user1</position>
+		<position>user2</position>
+		<position>user3</position>
+		<position>user4</position>
+		<position>breadcrumb</position>
+		<position>portfolio</position>
+		<position>content-top</position>
+		<position>content-above</position>
+		<position>content-bottom-above</position>
+		<position>content-bottom-a</position>
+		<position>content-bottom-b</position>
+		<position>content-bottom-c</position>
+		<position>content-bottom</position>
+		<position>sidebar-r</position>
+		<position>bottom-above</position>
+		<position>bottom</position>
+		<position>bottom-a</position>
+		<position>bottom-b</position>
+		<position>bottom-c</position>
+		<position>footer</position>
+		<position>footer-a</position>
+		<position>footer-b</position>
+		<position>footer-c</position>
+		<position>footer-d</position>
+		<position>footer-e</position>
+		<position>debug</position>
+	</positions>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			
+				<field name="logo" type="media"
+					   label="TPL_VISIA_LOGO_LABEL" description="TPL_VISIA_LOGO_DESC" />
+
+				<field name="brandname"  type="text" default=""
+					label="TPL_VISIA_BRANDING_LABEL"
+					description="TPL_VISIA_BRANDING_DESC"
+					filter="string" />
+			
+				<field name="slogan" type="text" default=""
+					label="TPL_VISIA_SLOGAN_LABEL"
+					description="TPL_VISIA_SLOGAN_DESC"
+					filter="string" />
+
+				<field name="copyright" type="text" default="" 
+					label="TPL_VISIA_COPYTEXT" 
+					description="TPL_VISIA_COPYTEXT_DESC" />
+				
+				<field name="show_component" type="radio" class="btn-group" default="0" label="Show Component" description="Show component on the home page (default menu item) or not">
+					<option value="1">JYes</option>
+                    <option value="0">JNo</option>
+				</field>
+
+				<field name="hide_menu_itemids" type="text" default="" label="Hidden Component in ItemIds" description="Hide component wrapper for these specific menu item IDs. Fill in with comma delimited strings if there are more than one menu item. Find out your menu item IDs in your Menu Manager" />
+
+				<field name="displayspacer1" type="spacer" label="Features" class="text"/>
+
+				<field name="color_theme" type="filelist" default="ruby-red.css" label="TPL_VISIA_THEME_LABEL" description="TPL_VISIA_THEME_DESC" 
+						directory="templates/visia/stylesheets/colors/" hide_default="true" filter="\.css" stripext="true" />
+
+				
+
+				<field name="enable_loader" type="list" default="2" label="TPL_VISIA_ENABLEPAGELOADER_LABEL" description="TPL_VISIA_ENABLEPAGELOADER_DESC">
+					<option value="1">Yes - only on default menu item</option>
+					<option value="0">JNo</option>
+				</field>
+
+
+				<field name="is_slider" type="radio" class="btn-group" default="0" label="Slider at Hero" description="Whether to use image slider for the hero module position or not. You need to publish vegasbgslider module on hero position.">
+					<option value="1">JYes</option>
+                    <option value="0">JNo</option>
+				</field>
+
+				<field name="enable_parallax_bg1" type="radio" class="btn-group" default="1" label="TPL_VISIA_ENABLEPARALLAXBG1_LABEL" description="TPL_VISIA_ENABLEPARALLAXBG1_DESC">
+					<option value="1">JYes</option>
+                    <option value="0">JNo</option>
+				</field>
+				<field name="parallax_bg_1" type="media"
+					   label="TPL_VISIA_PARALLAXBG1_LABEL" description="TPL_VISIA_PARALLAXBG_DESC" />
+
+				<field name="parallax_bg_2" type="media"
+					   label="TPL_VISIA_PARALLAXBG2_LABEL" description="TPL_VISIA_PARALLAXBG_DESC" />
+				<!--<field name="bgcolor_2" type="color" default="#eee" label="TPL_VISIA__BACKGROUND_COLOR_2_LABEL" 
+						description="TPL_VISIA__BACKGROUND_COLOR_2_DESC" />-->
+
+				<field name="parallax_bg_3" type="media"
+					   label="TPL_VISIA_PARALLAXBG3_LABEL" description="TPL_VISIA_PARALLAXBG_DESC" />
+
+				<field name="parallax_bg_4" type="media"
+					   label="TPL_VISIA_PARALLAXBG4_LABEL" description="TPL_VISIA_PARALLAXBG_DESC" />
+
+				
+				<field name="displayspacer2" type="spacer" label="SEO" class="text"/>
+
+				<field name="googlemeta" type="text" default="" label="TPL_VISIA_GOOGLEMETAKEY" description="TPL_VISIA_GOOGLEMETAKEY_DESC" />
+				<field name="analytics" type="text" default="" label="TPL_VISIA_ANALYTICS" description="TPL_VISIA_ANALYTICS_DESC" />
+				
+			</fieldset>
+		</fields>
+	</config>
+	<languages folder="language">
+            <language tag="en-GB">en-GB/en-GB.tpl_visia.ini</language>
+            <language tag="en-GB">en-GB/en-GB.tpl_visia.sys.ini</language>
+    </languages>
+	
+</extension>

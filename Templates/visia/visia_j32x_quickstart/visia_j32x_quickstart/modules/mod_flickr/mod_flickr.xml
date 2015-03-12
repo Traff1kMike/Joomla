@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site"
+	method="upgrade">
+	<name>Flickr Photostream</name>
+	<author>J!Labs</author>
+	<creationDate>Oct 2013</creationDate>
+	<copyright>Copyright (C)2013 J!Labs . All rights unreserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>erwin@joomla-labs.com</authorEmail>
+	<authorUrl>www.joomla-labs.com</authorUrl>
+	<version>2.5.0</version>
+	<description>Simple Flickr photostream module for Joomla!</description>
+	<files>
+		<filename module="mod_flickr">mod_flickr.php</filename>
+		<filename module="mod_flickr">index.html</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<!--
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_flickr.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_flickr.sys.ini</language>
+	</languages>
+	-->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				
+				<field name="flickr_id" type="text"
+					   label="Flickr ID" description="Fill in your preference Flickr ID here" />
+				<field name="count" type="text"
+					   label="Number of Photo" description="Fill in with the number of Flickr photos here" />
+
+			</fieldset>
+			
+			<fieldset
+				name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="Module Class Suffix"
+					description="Module Class Suffix" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="Caching"
+					description="Select whether to cache the content of this module or not">
+					<option
+						value="1">Use global</option>
+					<option
+						value="0">No caching</option>
+				</field>
+				
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="Cache Time"
+					description="The time before the module is recached" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

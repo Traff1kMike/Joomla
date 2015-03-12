@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module"
+	version="3.1"
+	client="site"
+	method="upgrade">
+	<name>Visia Contact</name> 
+	<author>erwin schro</author> 
+	<creationDate>Oct 2013</creationDate> 
+	<copyright>www.joomla-labs.com</copyright> 
+	<license>This extension in released under the GNU/GPL License - http://www.gnu.org/copyleft/gpl.html</license> 
+	<authorEmail>erwin.schro@joomla-labs.com</authorEmail> 
+	<authorUrl>www.joomla-labs.com</authorUrl> 
+	<version>3.0.0</version> 
+	<description>MOD_VISIACONTACT_XML_DESC</description>
+	
+	<files>
+		<filename module="mod_visiacontact">mod_visiacontact.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_visiacontact.sys.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_visiacontact.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="format"
+				       type="list"
+				       default="debug"
+				       label="MOD_VISIACONTACT_SESSION_FORMAT_LABEL"
+				       description="MOD_VISIACONTACT_SESSION_FORMAT_DESC">
+					<!--<option value="debug">Debug</option>-->
+					<option value="raw">Raw</option>
+					<!--<option value="json">JSON</option>-->
+				</field>
+				<field name="node"
+				       type="text"
+				       default="data"
+				       label="MOD_VISIACONTACT_SESSION_NODE_LABEL"
+				       description="MOD_VISIACONTACT_SESSION_NODE_DESCS" />
+
+				
+
+				<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Contact Form&lt;/div&gt;" />
+
+				<field name="name" type="text" default="Name" label="MOD_VISIACONTACT_NAMELABEL_LABEL" description="MOD_VISIACONTACT_NAMELABEL_DESC" />
+				<field name="email" type="text" default="Email" label="MOD_VISIACONTACT_EMAILLABEL_LABEL" description="MOD_VISIACONTACT_EMAILLABEL_DESC" />
+				
+				<field name="message" type="text" default="Message" label="MOD_VISIACONTACT_MSGLABEL_LABEL" description="MOD_VISIACONTACT_MSGLABEL_DESC" />
+				<field name="enable_captcha" type="list" default="1" label="MOD_VISIACONTACT_ENABLECAPTCHA_LABEL" description="MOD_VISIACONTACT_ENABLECAPTCHA_DESC">
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>				
+				<field name="captcha_label" type="text" default="Captcha" label="MOD_VISIACONTACT_CAPTCHALABEL_LABEL" description="MOD_VISIACONTACT_CAPTCHALABEL_DESC" />
+				<field name="submit" type="text" default="Send" label="MOD_VISIACONTACT_SUBMITBTNTEXT_LABEL" description="MOD_VISIACONTACT_SUBMITBTNTEXT_DESC" />
+				
+				<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Email&lt;/div&gt;" />
+				
+				<field name="recipient" type="email" default="me@visia.com" label="MOD_VISIACONTACT_RECEMAIL_LABEL" description="MOD_VISIACONTACT_RECEMAIL_DESC" required="true" validate="email" />
+				
+				<field name="subject" type="text" default="Request a Quote" label="MOD_VISIACONTACT_EMAILSUBJECT_LABEL" description="MOD_VISIACONTACT_EMAILSUBJECT_DESC" />
+				
+				
+			</fieldset>		
+		</fields>
+	</config>
+</extension>

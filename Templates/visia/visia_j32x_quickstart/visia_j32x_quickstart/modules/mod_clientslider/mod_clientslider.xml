@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site"
+	method="upgrade">
+	<name>MOD_CLIENTSLIDER</name>
+	<author>J!Labs</author>
+	<creationDate>Oct 2013</creationDate>
+	<copyright>Copyright (C)2013 J!Labs . All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>erwin@joomla-labs.com</authorEmail>
+	<authorUrl>www.joomla-labs.com</authorUrl>
+	<version>3.0.0</version>
+	<description>MOD_CLIENTSLIDER_XML_DESC</description>
+	<files>
+		<filename module="mod_clientslider">mod_clientslider.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_clientslider.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_clientslider.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field name="num_of_items" type="text"
+					   label="MOD_CLIENTSLIDER_NUMOFITEMS_LABEL" description="MOD_CLIENTSLIDER_NUMOFITEMS_DESC" />
+
+				<field name="logo_img_1" type="media"
+					   label="MOD_CLIENTSLIDER_LOGOIMG1_LABEL" description="MOD_CLIENTSLIDER_LOGOIMG_DESC" />
+				<field name="ctext_1" type="text"
+					   label="MOD_CLIENTSLIDER_CTEXT1_LABEL" description="MOD_CLIENTSLIDER_CTEXT_DESC" />
+				<field name="cname_1" type="text"
+					   label="MOD_CLIENTSLIDER_CNAME1_LABEL" description="MOD_CLIENTSLIDER_CNAME_DESC" />
+
+				<field name="logo_img_2" type="media"
+					   label="MOD_CLIENTSLIDER_LOGOIMG2_LABEL" description="MOD_CLIENTSLIDER_LOGOIMG_DESC" />
+				<field name="ctext_2" type="text"
+					   label="MOD_CLIENTSLIDER_CTEXT2_LABEL" description="MOD_CLIENTSLIDER_CTEXT_DESC" />
+				<field name="cname_2" type="text"
+					   label="MOD_CLIENTSLIDER_CNAME2_LABEL" description="MOD_CLIENTSLIDER_CNAME_DESC" />
+
+				<field name="logo_img_3" type="media"
+					   label="MOD_CLIENTSLIDER_LOGOIMG3_LABEL" description="MOD_CLIENTSLIDER_LOGOIMG_DESC" />
+				<field name="ctext_3" type="text"
+					   label="MOD_CLIENTSLIDER_CTEXT3_LABEL" description="MOD_CLIENTSLIDER_CTEXT_DESC" />
+				<field name="cname_3" type="text"
+					   label="MOD_CLIENTSLIDER_CNAME3_LABEL" description="MOD_CLIENTSLIDER_CNAME_DESC" />
+
+				<field name="logo_img_4" type="media"
+					   label="MOD_CLIENTSLIDER_LOGOIMG4_LABEL" description="MOD_CLIENTSLIDER_LOGOIMG_DESC" />
+				<field name="ctext_4" type="text"
+					   label="MOD_CLIENTSLIDER_CTEXT4_LABEL" description="MOD_CLIENTSLIDER_CTEXT_DESC" />
+				<field name="cname_4" type="text"
+					   label="MOD_CLIENTSLIDER_CNAME4_LABEL" description="MOD_CLIENTSLIDER_CNAME_DESC" />
+				
+		
+			</fieldset>
+			
+			<fieldset
+				name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="Module Class Suffix"
+					description="Module Class Suffix" />
+					
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="Caching"
+					description="Select whether to cache the content of this module or not">
+					<option
+						value="1">Use global</option>
+					<option
+						value="0">No caching</option>
+				</field>
+				
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="Cache Time"
+					description="The time before the module is recached" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

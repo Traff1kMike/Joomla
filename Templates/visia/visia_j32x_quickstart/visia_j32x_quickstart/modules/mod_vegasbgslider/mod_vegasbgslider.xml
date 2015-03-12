@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site"
+	method="upgrade">
+	<name>MOD_VEGASBGSLIDER</name>
+	<author>J!Labs</author>
+	<creationDate>Oct 2013</creationDate>
+	<copyright>Copyright (C)2013 J!Labs . All rights unreserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>erwin@joomla-labs.com</authorEmail>
+	<authorUrl>www.joomla-labs.com</authorUrl>
+	<version>3.0.0</version>
+	<description>MOD_VEGASBGSLIDER_XML_DESC</description>
+	<files>
+		<filename module="mod_vegasbgslider">mod_vegasbgslider.php</filename>
+		<filename module="mod_vegasbgslider">index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_vegasbgslider.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_vegasbgslider.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				
+				
+				
+				<field name="is_slider" type="radio" class="btn-group" default="0" label="MOD_VEGASBGSLIDER_SLIDER_LABEL" description="MOD_VEGASBGSLIDER_SLIDER_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="displayspacer1" type="spacer" label="Background 1" class="text"/>
+				<field name="bgimg_1" type="media"
+					   label="MOD_VEGASBGSLIDER_BGIMG1_LABEL" description="MOD_VEGASBGSLIDER_BGIMG1_DESC" />
+				<field name="imgtitle_1" type="text"
+					   label="MOD_VEGASBGSLIDER_IMGTITLE1_LABEL" description="MOD_VEGASBGSLIDER_IMGTITLE1_DESC" />
+				<field name="imgdesc_1" type="text"
+					   label="MOD_VEGASBGSLIDER_IMGDESC1_LABEL" description="MOD_VEGASBGSLIDER_IMGDESC1_DESC" />
+
+				<field name="displayspacer2" type="spacer" label="Background 2" class="text"/>
+				<field name="bgimg_2" type="media"
+					   label="MOD_VEGASBGSLIDER_BGIMG2_LABEL" description="MOD_VEGASBGSLIDER_BGIMG2_DESC" />
+				<field name="imgtitle_2" type="text"
+					   label="MOD_VEGASBGSLIDER_IMGTITLE2_LABEL" description="MOD_VEGASBGSLIDER_IMGTITLE2_DESC" />
+				<field name="imgdesc_2" type="text"
+					   label="MOD_VEGASBGSLIDER_IMGDESC2_LABEL" description="MOD_VEGASBGSLIDER_IMGDESC2_DESC" />
+
+				<field name="displayspacer3" type="spacer" label="Background 3" class="text"/>
+				<field name="bgimg_3" type="media"
+					   label="MOD_VEGASBGSLIDER_BGIMG3_LABEL" description="MOD_VEGASBGSLIDER_BGIMG3_DESC" />
+				<field name="imgtitle_3" type="text"
+					   label="MOD_VEGASBGSLIDER_IMGTITLE3_LABEL" description="MOD_VEGASBGSLIDER_IMGTITLE3_DESC" />
+				<field name="imgdesc_3" type="text"
+					   label="MOD_VEGASBGSLIDER_IMGDESC3_LABEL" description="MOD_VEGASBGSLIDER_IMGDESC3_DESC" />
+
+				<field name="overlays" type="filelist" default="" label="MOD_VEGASBGSLIDER_OVERLAYS_LABLE" description="MOD_VEGASBGSLIDER_OVERLAYS_DESC" 
+						directory="modules/mod_vegasbgslider/assets/images/overlays" hide_default="true" filter="\.png" />
+		
+			</fieldset>
+			
+			<fieldset
+				name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="Module Class Suffix"
+					description="Module Class Suffix" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="Caching"
+					description="Select whether to cache the content of this module or not">
+					<option
+						value="1">Use global</option>
+					<option
+						value="0">No caching</option>
+				</field>
+				
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="Cache Time"
+					description="The time before the module is recached" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
