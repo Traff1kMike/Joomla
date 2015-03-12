@@ -1,0 +1,29 @@
+.rsdir-top-rated-entries {
+    margin-bottom: 12px;
+}
+
+.rsdir-top-rated-entries.vertical .rsdir-top-rated-entry {
+    margin-bottom: 10px;
+}
+
+.rsdir-top-rated-entries .thumbnail {
+    display: inline-block;
+}
+
+.rsdir-top-rated-entry-body.body-top {
+    margin-bottom: 10px;
+}
+
+.rsdir-top-rated-entry-price {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.rsdir-top-rated-entry-title {
+    display: block;
+}
+
+.rsdir-top-rated-entries .rsdir-no-image {
+    background: no-repeat center center #FBFBF1;
+    display: block;
+}

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general" label="COM_RSDIRECTORY_FIELD_PROPERTIES_TAB_GENERAL_LABEL" addfieldpath="/administrator/components/com_rsdirectory/models/fields">
+            
+        <field
+            name="name"
+            type="text"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_NAME_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_NAME_DESC"
+            required="true"
+            filter="cmd"
+            size="30" />
+            
+        <field
+            name="form_caption"
+            type="text"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_FORM_CAPTION_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_FORM_CAPTION_DESC"
+            size="255" />
+            
+        <field
+            name="listing_caption"
+            type="text"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_LISTING_CAPTION_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_LISTING_CAPTION_DESC"
+            size="255" />
+            
+        <field
+            name="default_date"
+            type="calendar"
+            format="%m/%d/%Y"
+            class="default-date"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_DEFAULT_DATE_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_DEFAULT_DATE_DESC"
+            size="255" />
+            
+        <field
+            name="min_date"
+            type="calendar"
+            format="%m/%d/%Y"
+            class="min-date"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_MIN_DATE_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_MIN_DATE_DESC"
+            size="255" />
+            
+        <field
+            name="max_date"
+            type="calendar"
+            format="%m/%d/%Y"
+            class="max-date"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_MAX_DATE_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_MAX_DATE_DESC"
+            size="255" />
+            
+        <field
+            name="date_mask"
+            type="rscombobox"
+            class="date-mask"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_DATE_MASK_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_DATE_MASK_DESC">
+            <option value="human_readable">COM_RSDIRECTORY_DATE_AND_TIME_HUMAN_READABLE</option>
+            <option value="d F Y">25 December 2013</option>
+			<option value="F d, Y">December 25, 2013</option>
+			<option value="m/d/y">12/25/2013</option>
+			<option value="d.m.Y">25.12.2013</option>
+			<option value="m.d.Y">12.25.2013</option>
+        </field>
+            
+        <field
+            name="time_mask"
+            type="rscombobox"
+            class="time-mask"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_TIME_MASK_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_TIME_MASK_DESC">
+            <option value="H:i:s">13:23:10</option>
+			<option value="H:i">13:23</option>
+			<option value="g:i a">1:23 pm</option>
+        </field>
+            
+        <field
+            name="calendar_layout"
+            class="calendar-layout"
+            type="list"
+			default="flat"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_CALENDAR_LAYOUT_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_CALENDAR_LAYOUT_DESC"
+            filter="cmd">
+            <option value="flat">COM_RSDIRECTORY_FLAT</option>
+            <option value="popup">COM_RSDIRECTORY_POPUP</option>
+        </field>
+            
+        <field
+            name="readonly"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_READONLY_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_CALENDAR_READONLY_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="show_help_tip"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_SHOW_HELP_TIP_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_SHOW_HELP_TIP_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="help_tip"
+            type="textarea"
+            class="input-xxlarge"
+            rows="8"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_HELP_TIP_LABEL"
+            size="255" />
+            
+        <field
+            name="show_help_text"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_SHOW_HELP_TEXT_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="help_text_position"
+            type="list"
+            class="help-text"
+			default="block"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_HELP_TEXT_POSITION_LABEL">
+            <option value="block">Block</option>
+            <option value="inline">Inline</option>
+        </field>
+            
+        <field
+            name="help_text"
+            type="textarea"
+            class="help-text input-xxlarge"
+            rows="8"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_HELP_TEXT_LABEL" />
+            
+        <field
+            name="additional_html_attributes"
+            type="text"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_ADDITIONAL_HTML_ATTRIBUTES_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_ADDITIONAL_HTML_ATTRIBUTES_DESC"
+            size="255" />
+            
+        <field
+            name="credits"
+            type="text"
+            default="0"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_CREDITS_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_CREDITS_DESC"
+            filter="integer"
+            size="10" />
+            
+        <field
+            name="published"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_PUBLISHED_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+			
+		<field
+            name="id"
+            type="hidden"
+            default="0"
+            filter="integer" />
+            
+        <field
+            name="field_type_id"
+            type="hidden"
+            default="0"
+            filter="integer" />
+            
+    </fieldset>
+        
+    <fieldset name="searchable" label="COM_RSDIRECTORY_FIELD_PROPERTIES_TAB_SEARCHABLE_LABEL">
+            
+        <field
+            name="searchable_simple"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_SEARCHABLE_SIMPLE_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_SEARCHABLE_SIMPLE_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="searchable_advanced"
+            class="searchable-advanced"
+            type="list"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_SEARCHABLE_ADVANCED_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_SEARCHABLE_ADVANCED_DESC"
+            filter="cmd">
+            <option value="">JNONE</option>
+            <option value="textbox">COM_RSDIRECTORY_FIELDS_TEXTBOX</option>
+            <option value="range">COM_RSDIRECTORY_FIELDS_RANGE</option>
+			<option value="date_range">COM_RSDIRECTORY_FIELDS_DATE_RANGE</option>
+            <option value="checkboxgroup">COM_RSDIRECTORY_FIELDS_CHECKBOXGROUP</option>
+            <option value="radiogroup">COM_RSDIRECTORY_FIELDS_RADIOGROUP</option>
+            <option value="dropdown">COM_RSDIRECTORY_FIELDS_DROPDOWN</option>
+        </field>
+            
+        <field
+            name="searchable_advanced_caption"
+            class="searchable-advanced-field"
+            type="text"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_SEARCHABLE_ADVANCED_CAPTION_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_SEARCHABLE_ADVANCED_CAPTION_DESC"
+            size="255" />
+            
+        <field
+            name="searchable_advanced_items"
+            type="textarea"
+            class="searchable-advanced-field input-xxlarge"
+            rows="8"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_ITEMS_LABEL"
+            filter="JComponentHelper::filterText" />
+        
+        <field
+            name="searchable_advanced_condition_type"
+            type="list"
+            class="searchable-advanced-field"
+			default="strict"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_SEARCHABLE_ADVANCED_CONDITION_TYPE_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_SEARCHABLE_ADVANCED_CONDITION_TYPE_DESC">
+            <option value="strict">COM_RSDIRECTORY_CONDITION_TYPE_STRICT</option>
+            <option value="starts_with">COM_RSDIRECTORY_CONDITION_TYPE_STARTS_WITH</option>
+            <option value="ending_with">COM_RSDIRECTORY_CONDITION_TYPE_ENDING_WITH</option>
+            <option value="containing">COM_RSDIRECTORY_CONDITION_TYPE_CONTAINING</option>
+        </field>
+            
+    </fieldset>
+        
+    <fieldset name="validation" label="COM_RSDIRECTORY_FIELD_PROPERTIES_TAB_VALIDATION_LABEL">
+            
+        <field
+            name="required"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_REQUIRED_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_REQUIRED_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="validation_message"
+            type="textarea"
+            default="Invalid input."
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_VALIDATION_MESSAGE_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_VALIDATION_MESSAGE_DESC" />
+            
+    </fieldset>
+		
+	<fieldset name="forms" label="COM_RSDIRECTORY_FIELD_PROPERTIES_TAB_FORMS_LABEL">
+            
+        <field
+			name="forms"
+            type="forms"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_FORMS_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_FORMS_DESC" />
+            
+    </fieldset>
+</form>

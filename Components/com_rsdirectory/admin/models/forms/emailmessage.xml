@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="emailmessage" addfieldpath="/administrator/components/com_rsdirectory/models/fields">
+            
+        <field
+            name="description"
+            type="text"
+            label="COM_RSDIRECTORY_EMAIL_MESSAGE_DESCRIPTION_LABEL"
+            description="COM_RSDIRECTORY_EMAIL_MESSAGE_DESCRIPTION_DESC" />
+            
+        <field
+            name="type"
+            type="list"
+            label="COM_RSDIRECTORY_EMAIL_MESSAGE_TYPE_LABEL"
+            description="COM_RSDIRECTORY_EMAIL_MESSAGE_TYPE_DESC"
+            filter="cmd"
+            required="true">
+            <option value="">COM_RSDIRECTORY_SELECT_EMAIL_MESSAGE_TYPE</option>
+            <option value="submit_entry">COM_RSDIRECTORY_EMAIL_MESSAGE_TYPES_SUBMIT_ENTRY</option>
+            <option value="publish_entry">COM_RSDIRECTORY_EMAIL_MESSAGE_TYPES_PUBLISH_ENTRY</option>
+            <option value="unpublish_entry">COM_RSDIRECTORY_EMAIL_MESSAGE_TYPES_UNPUBLISH_ENTRY</option>
+            <option value="delete_entry">COM_RSDIRECTORY_EMAIL_MESSAGE_TYPES_DELETE_ENTRY</option>
+            <option value="entry_expiration">COM_RSDIRECTORY_EMAIL_MESSAGE_TYPES_ENTRY_EXPIRATION</option>
+            <option value="entry_expiration_notice">COM_RSDIRECTORY_EMAIL_MESSAGE_TYPES_ENTRY_EXPIRATION_NOTICE</option>
+        </field>
+            
+        <field
+            name="entry_expiration_period"
+            type="text"
+            default="48"
+            label="COM_RSDIRECTORY_EMAIL_MESSAGE_ENTRY_EXPIRATION_PERIOD_LABEL"
+            description="COM_RSDIRECTORY_EMAIL_MESSAGE_ENTRY_EXPIRATION_PERIOD_DESC"
+            filter="integer" />
+            
+        <field
+            name="category_id"
+            type="categoryselect"
+            class="category"
+            label="COM_RSDIRECTORY_EMAIL_MESSAGE_CATEGORY_LABEL"
+            description="COM_RSDIRECTORY_EMAIL_MESSAGE_CATEGORY_DESC" />
+            
+        <field
+            name="to_name"
+            type="text"
+            label="COM_RSDIRECTORY_EMAIL_MESSAGE_TO_NAME_LABEL"
+            description="COM_RSDIRECTORY_EMAIL_MESSAGE_TO_NAME_DESC" />
+            
+        <field
+            name="to_email"
+            type="text"
+            required="true"
+            label="COM_RSDIRECTORY_EMAIL_MESSAGE_TO_EMAIL_LABEL"
+            description="COM_RSDIRECTORY_EMAIL_MESSAGE_TO_EMAIL_DESC" />
+            
+        <field
+            name="bcc"
+            type="text"
+            label="COM_RSDIRECTORY_EMAIL_MESSAGE_BCC_LABEL"
+            description="COM_RSDIRECTORY_EMAIL_MESSAGE_BCC_DESC" />
+            
+        <field
+            name="cc"
+            type="text"
+            label="COM_RSDIRECTORY_EMAIL_MESSAGE_CC_LABEL"
+            description="COM_RSDIRECTORY_EMAIL_MESSAGE_CC_DESC" />
+            
+        <field
+            name="subject"
+            type="text"
+            label="COM_RSDIRECTORY_EMAIL_MESSAGE_SUBJECT_LABEL"
+            description="COM_RSDIRECTORY_EMAIL_MESSAGE_SUBJECT_DESC"
+            required="true" />
+            
+        <field
+            name="send_html"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_EMAIL_MESSAGE_SEND_HTML_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="text"
+            type="editor"
+            label="COM_RSDIRECTORY_EMAIL_MESSAGE_TEXT_LABEL"
+            description="COM_RSDIRECTORY_EMAIL_MESSAGE_TEXT_DESC"
+            filter="JComponentHelper::filterText"
+            required="true"
+            hide="readmore,pagebreak" />
+            
+        <field
+            name="published"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_PUBLISHED_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="id"
+            type="hidden"
+            default="0"
+            filter="integer" />
+            
+    </fieldset>
+</form>

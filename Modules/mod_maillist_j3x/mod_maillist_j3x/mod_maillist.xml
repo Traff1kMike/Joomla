@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site"
+	method="upgrade">
+	<name>Email List Subscribe</name>
+	<author>J!Labs</author>
+	<creationDate>Oct 2013</creationDate>
+	<copyright>Copyright (C)2013 J!Labs . All rights unreserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>erwin@joomla-labs.com</authorEmail>
+	<authorUrl>www.joomla-labs.com</authorUrl>
+	<version>3.0.0</version>
+	<description>MOD_MAILLIST_XML_DESC</description>
+	<files>
+		<filename module="mod_maillist">mod_maillist.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_maillist.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_maillist.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				
+				<field name="maillist_email" type="email" default="newsletter@test.com"
+					   label="Mailing List Email" description="Fill in your email address of your mailing list here" 
+					   required="true" validate="email" />
+				
+				<field name="show_pretext" type="radio" default="0" label="Show Pre Text" description="Show pre-text above the mailing list subscribe form">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+
+				<field name="pretext" type="text" label="Pre text"
+					default="If you want to keep yourself informed on what we are up to why don't you subscibre to our newsletter. Just pop in your email below and enjoy. Oh and we never spam, because it's not cool. And not cool we are not!" 
+					description="Fill in your preference introtext here" />
+
+				<field name="success_msg" type="text" label="Success Message"
+					default="Success! You have subscribed to some email goodness." 
+					description="Success message to displays when user subscribed successfully" />
+
+				<field name="error_msg" type="text" label="Error Message"
+					default="Oops! Something is wrong, maybe double checking your email will help." 
+					description="Error message to displays when user input empty or wrong email address" />
+				
+				<field name="show_numthings" type="radio" default="0" label="Show Numbers" description="Show number of things done below">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+
+				<field name="countlabel_1" type="text"
+					   label="Things 1 Label" description="Fill in with Label of things you've done here, i.e Projects" />
+				<field name="countnum_1" type="text"
+					   label="Number of Things 1" description="Fill in with the number of things you've done here, i.e 22" />
+
+				<field name="countlabel_2" type="text"
+					   label="Things 2 Label" description="Fill in with Label of things you've done here, i.e Coffee" />
+				<field name="countnum_2" type="text"
+					   label="Number of Things 2" description="Fill in with the number of things you've done here, i.e 88" />
+
+				<field name="countlabel_3" type="text"
+					   label="Things 3 Label" description="Fill in with Label of things you've done here, i.e Tweets" />
+				<field name="countnum_3" type="text"
+					   label="Number of Things 3" description="Fill in with the number of things you've done here, i.e 320" />
+				
+				
+
+			</fieldset>
+			
+			<fieldset
+				name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="Module Class Suffix"
+					description="Module Class Suffix" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="Caching"
+					description="Select whether to cache the content of this module or not">
+					<option
+						value="1">Use global</option>
+					<option
+						value="0">No caching</option>
+				</field>
+				
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="Cache Time"
+					description="The time before the module is recached" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

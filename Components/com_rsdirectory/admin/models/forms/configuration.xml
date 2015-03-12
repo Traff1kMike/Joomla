@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+            
+        <field
+            name="date_and_time_display"
+            type="list"
+            label="COM_RSDIRECTORY_DATE_AND_TIME_DISPLAY_LABEL"
+            description="COM_RSDIRECTORY_DATE_AND_TIME_DISPLAY_DESC">
+            <option value="human_readable">COM_RSDIRECTORY_DATE_AND_TIME_HUMAN_READABLE</option>
+            <option value="Y-m-d H:i:s">COM_RSDIRECTORY_YYYY_MM_DD_24_HOUR_FORMAT</option>
+            <option value="Y-m-d h:i:s a">COM_RSDIRECTORY_YYYY_MM_DD_12_HOUR_FORMAT</option>
+            <option value="d-m-Y H:i:s">COM_RSDIRECTORY_DD_MM_YYYY_24_HOUR_FORMAT</option>
+            <option value="d-m-Y h:i:s a">COM_RSDIRECTORY_DD_MM_YYYY_12_HOUR_FORMAT</option>
+            <option value="m-d-Y H:i:s">COM_RSDIRECTORY_MM_DD_YYYY_24_HOUR_FORMAT</option>
+            <option value="m-d-Y h:i:s a">COM_RSDIRECTORY_MM_DD_YYYY_12_HOUR_FORMAT</option>
+        </field>
+            
+        <field
+            name="load_bootstrap"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_LOAD_BOOTSTRAT_LABEL"
+            description="COM_RSDIRECTORY_LOAD_BOOTSTRAT_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="load_jquery"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_LOAD_JQUERY_LABEL"
+            description="COM_RSDIRECTORY_LOAD_JQUERY_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="break_type"
+            type="list"
+            default="column_break"
+            label="COM_RSDIRECTORY_BREAK_TYPE_LABEL"
+            description="COM_RSDIRECTORY_BREAK_TYPE_DESC"
+            filter="word">
+            <option value="column_break">COM_RSDIRECTORY_FIELDS_COLUMN_BREAK</option>
+            <option value="section_break">COM_RSDIRECTORY_FIELDS_SECTION_BREAK</option>
+            <option value="tab_break">COM_RSDIRECTORY_FIELDS_TAB_BREAK</option>
+        </field>
+            
+        <field
+            name="jomsocial_activities"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_JOMSOCIAL_ACTIVITIES_LABEL"
+            description="COM_RSDIRECTORY_JOMSOCIAL_ACTIVITIES_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="entry_author"
+            type="list"
+            default="name"
+            label="COM_RSDIRECTORY_ENTRY_AUTHOR_LABEL"
+            description="COM_RSDIRECTORY_ENTRY_AUTHOR_DESC"
+            filter="word">
+            <option value="name">COM_RSDIRECTORY_ENTRY_AUTHOR_NAME</option>
+            <option value="username">COM_RSDIRECTORY_ENTRY_AUTHOR_USERNAME</option>
+            <option value="email">COM_RSDIRECTORY_ENTRY_AUTHOR_EMAIL</option>
+        </field>
+            
+    </fieldset>
+        
+    <fieldset name="contact">
+            
+        <field
+            name="contact_modal_body_height"
+            type="text"
+            default="500"
+            label="COM_RSDIRECTORY_CONTACT_MODAL_BODY_HEIGHT_LABEL"
+            description="COM_RSDIRECTORY_CONTACT_MODAL_BODY_HEIGHT_DESC"
+            filter="integer" />
+            
+    </fieldset>
+        
+    <fieldset name="emails">
+            
+        <field
+            name="use_joomla_email_configuration"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_USE_JOOMLA_EMAIL_CONFIGURATION_LABEL"
+            description="COM_RSDIRECTORY_USE_JOOMLA_EMAIL_CONFIGURATION_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="from_email"
+            type="text"
+            label="COM_RSDIRECTORY_FROM_EMAIL_LABEL"
+            description="COM_RSDIRECTORY_FROM_EMAIL_DESC"
+            filter="string"
+            size="30"
+            validate="email" />
+                
+        <field
+            name="from_name"
+            type="text"
+            label="COM_RSDIRECTORY_FROM_NAME_LABEL"
+            description="COM_RSDIRECTORY_FROM_NAME_DESC"
+            filter="string"
+            size="30" />
+                
+    </fieldset>
+        
+    <fieldset name="payments">
+            
+        <field
+            name="currency"
+            type="text"
+            label="COM_RSDIRECTORY_CURRENCY_LABEL"
+            description="COM_RSDIRECTORY_CURRENCY_DESC"
+            required="true"
+            filter="word"
+            size="3" />
+            
+        <field
+            name="currency_sign"
+            type="text"
+            label="COM_RSDIRECTORY_CURRENCY_SIGN_LABEL"
+            description="COM_RSDIRECTORY_CURRENCY_SIGN_DESC"
+            required="true"
+            size="1" />
+        
+        <field
+            name="decimals"
+            type="text"
+            label="COM_RSDIRECTORY_DECIMALS_LABEL"
+            description="COM_RSDIRECTORY_DECIMALS_DESC"
+            size="1"
+            required="true"
+            filter="integer" />
+            
+        <field
+            name="decimal_point"
+            type="text"
+            label="COM_RSDIRECTORY_DECIMAL_POINT_LABEL"
+            description="COM_RSDIRECTORY_DECIMAL_POINT_DESC"
+            size="1" />
+            
+        <field
+            name="thousands_separator"
+            type="text"
+            label="COM_RSDIRECTORY_THOUSANDS_SEPARATOR_LABEL"
+            description="COM_RSDIRECTORY_THOUSANDS_SEPARATOR_DESC"
+            size="1" />
+            
+        <field
+            name="payment_mask"
+            type="text"
+            label="COM_RSDIRECTORY_PAYMENT_MASK_LABEL"
+            description="COM_RSDIRECTORY_PAYMENT_MASK_DESC"
+            required="true"
+            size="30" />
+            
+        <field
+            name="credit_cost"
+            type="text"
+            default="0"
+            label="COM_RSDIRECTORY_PAYMENT_CREDIT_COST_LABEL"
+            description="COM_RSDIRECTORY_PAYMENT_CREDIT_COST_DESC"
+            filter="float" />
+            
+    </fieldset>
+        
+    <fieldset name="watermark">
+            
+        <field
+            name="watermark_images"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_WATERMARK_IMAGES_LABEL"
+            description="COM_RSDIRECTORY_WATERMARK_IMAGES_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="watermark"
+            type="media"
+            label="COM_RSDIRECTORY_WATERMARK_LABEL"
+            description="COM_RSDIRECTORY_WATERMARK_DESC" />
+                
+        <field
+            name="watermark_position"
+            type="list"
+            default="BR"
+            label="COM_RSDIRECTORY_WATERMARK_POSITION_LABEL"
+            description="COM_RSDIRECTORY_WATERMARK_POSITION_DESC"
+            filter="word">
+            <option value="TL">COM_RSDIRECTORY_TOP_LEFT</option>
+            <option value="TR">COM_RSDIRECTORY_TOP_RIGHT</option>
+            <option value="BL">COM_RSDIRECTORY_BOTTOM_LEFT</option>
+            <option value="BR">COM_RSDIRECTORY_BOTTOM_RIGHT</option>
+        </field>
+            
+        <field
+            name="watermark_opacity"
+            type="text"
+            label="COM_RSDIRECTORY_WATERMARK_OPACITY_LABEL"
+            description="COM_RSDIRECTORY_WATERMARK_OPACITY_DESC"
+            required="true"
+            filter="integer"
+            size="3" />
+                
+        <field
+            name="watermark_size"
+            type="text"
+            label="COM_RSDIRECTORY_WATERMARK_SIZE_LABEL"
+            description="COM_RSDIRECTORY_WATERMARK_SIZE_DESC"
+            required="true"
+            filter="integer"
+            size="3" />
+                
+    </fieldset>
+        
+    <fieldset name="images_layout">
+            
+        <field
+            name="images_listing_detail_position"
+            type="list"
+            default="left"
+            label="COM_RSDIRECTORY_IMAGES_LISTING_DETAIL_POSITION_LABEL"
+            description="COM_RSDIRECTORY_IMAGES_LISTING_DETAIL_POSITION_DESC"
+            filter="word">
+            <option value="left">COM_RSDIRECTORY_LEFT</option>
+            <option value="right">COM_RSDIRECTORY_RIGHT</option>
+        </field>
+            
+        <field
+            name="images_detail_position"
+            type="list"
+            default="left"
+            label="COM_RSDIRECTORY_IMAGES_DETAIL_POSITION_LABEL"
+            description="COM_RSDIRECTORY_IMAGES_DETAIL_POSITION_DESC"
+            filter="word">
+            <option value="left">COM_RSDIRECTORY_LEFT</option>
+            <option value="right">COM_RSDIRECTORY_RIGHT</option>
+        </field>
+            
+    </fieldset>
+        
+    <fieldset name="thumbnails">
+            
+        <field
+            name="small_thumbnail_width"
+            type="text"
+            label="COM_RSDIRECTORY_SMALL_THUMBNAIL_WIDTH_LABEL"
+            description="COM_RSDIRECTORY_SMALL_THUMBNAIL_WIDTH_DESC"
+            required="true"
+            filter="integer"
+            size="4" />
+            
+        <field
+            name="small_thumbnail_height"
+            type="text"
+            label="COM_RSDIRECTORY_SMALL_THUMBNAIL_HEIGHT_LABEL"
+            description="COM_RSDIRECTORY_SMALL_THUMBNAIL_HEIGHT_DESC"
+            required="true"
+            filter="integer"
+            size="4" />
+            
+        <field
+            name="big_thumbnail_width"
+            type="text"
+            label="COM_RSDIRECTORY_BIG_THUMBNAIL_WIDTH_LABEL"
+            description="COM_RSDIRECTORY_BIG_THUMBNAIL_WIDTH_DESC"
+            required="true"
+            filter="integer"
+            size="4" />
+            
+        <field
+            name="big_thumbnail_height"
+            type="text"
+            label="COM_RSDIRECTORY_BIG_THUMBNAIL_HEIGHT_LABEL"
+            description="COM_RSDIRECTORY_BIG_THUMBNAIL_HEIGHT_DESC"
+            required="true"
+            filter="integer"
+            size="4" />
+            
+        <field
+            name="normal_thumbnail_width"
+            type="text"
+            label="COM_RSDIRECTORY_NORMAL_THUMBNAIL_WIDTH_LABEL"
+            description="COM_RSDIRECTORY_NORMAL_THUMBNAIL_WIDTH_DESC"
+            required="true"
+            filter="integer"
+            size="4" />
+            
+        <field
+            name="normal_thumbnail_height"
+            type="text"
+            label="COM_RSDIRECTORY_NORMAL_THUMBNAIL_HEIGHT_LABEL"
+            description="COM_RSDIRECTORY_NORMAL_THUMBNAIL_HEIGHT_DESC"
+            required="true"
+            filter="integer"
+            size="4" />
+        
+    </fieldset>
+        
+    <fieldset name="captcha">
+            
+        <field
+            name="captcha_type"
+            type="list"
+            default="built_in"
+            label="COM_RSDIRECTORY_CAPTCHA_TYPE_LABEL"
+            description="COM_RSDIRECTORY_CAPTCHA_TYPE_DESC"
+            filter="word">
+            <option value="built_in">COM_RSDIRECTORY_BUILT_IN_CAPTCHA</option>
+            <option value="recaptcha">COM_RSDIRECTORY_RECAPTCHA</option>
+        </field>
+            
+    </fieldset>
+        
+    <fieldset name="built_in_captcha">
+            
+        <field
+            name="captcha_characters_number"
+            type="text"
+            default="5"
+            label="COM_RSDIRECTORY_CAPTCHA_CHARACTERS_NUMBER_LABEL"
+            description="COM_RSDIRECTORY_CAPTCHA_CHARACTERS_NUMBER_DESC"
+            filter="integer"
+            size="2" />
+                
+        <field
+            name="captcha_generate_line"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_CAPTCHA_GENERATE_LINE_LABEL"
+            description="COM_RSDIRECTORY_CAPTCHA_GENERATE_LINE_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="captcha_case_sensitive"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_CAPTCHA_CASE_SENSITIVE_LABEL"
+            description="COM_RSDIRECTORY_CAPTCHA_CASE_SENSITIVE_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+    </fieldset>
+        
+    <fieldset name="recaptcha">
+        
+        <field
+            name="recaptcha_public_key"
+            type="text"
+            label="COM_RSDIRECTORY_RECAPTCHA_PUBLIC_KEY_LABEL"
+            description="COM_RSDIRECTORY_RECAPTCHA_PUBLIC_KEY_DESC"
+            filter="alnum" />
+            
+        <field
+            name="recaptcha_private_key"
+            type="text"
+            label="COM_RSDIRECTORY_RECAPTCHA_PRIVATE_KEY_LABEL"
+            description="COM_RSDIRECTORY_RECAPTCHA_PRIVATE_KEY_DESC"
+            filter="alnum" />
+                
+        <field
+            name="recaptcha_theme"
+            type="list"
+            default="0"
+            label="COM_RSDIRECTORY_RECAPTCHA_THEME_LABEL"
+            description="COM_RSDIRECTORY_RECAPTCHA_THEME_DESC"
+            filter="cmd">
+            <option value="red">COM_RSDIRECTORY_RECAPTCHA_THEME_RED</option>
+            <option value="white">COM_RSDIRECTORY_RECAPTCHA_THEME_WHITE</option>
+            <option value="blackglass">COM_RSDIRECTORY_RECAPTCHA_THEME_BLACKGLASS</option>
+            <option value="clean">COM_RSDIRECTORY_RECAPTCHA_THEME_CLEAN</option>
+        </field>    
+            
+    </fieldset>
+        
+    <fieldset name="comments" addfieldpath="/administrator/components/com_rsdirectory/models/fields">
+            
+        <field
+            name="enable_comments"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_ENABLE_COMMENTS_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="commenting_system"
+            type="comments"
+            label="COM_RSDIRECTORY_COMMENTING_SYSTEM_LABEL"
+            description="COM_RSDIRECTORY_COMMENTING_SYSTEM_DESC"
+            filter="word" />
+            
+    </fieldset>
+        
+    <fieldset name="facebook_comments">
+            
+        <field
+            name="facebook_comments_posts_number"
+            type="text"
+            label="COM_RSDIRECTORY_FACEBOOK_COMMENTS_POSTS_NUMBER_LABEL"
+            description="COM_RSDIRECTORY_FACEBOOK_COMMENTS_POSTS_NUMBER_DESC"
+            filter="integer"
+            size="2" />
+            
+    </fieldset>
+        
+    <fieldset name="disqus">
+            
+        <field
+            name="disqus_short_name"
+            type="text"
+            label="COM_RSDIRECTORY_DISQUS_SHORT_NAME_LABEL"
+            description="COM_RSDIRECTORY_DISQUS_SHORT_NAME_DESC" />
+            
+        <field
+            name="disqus_developer_mode"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_DISQUS_DEVELOPER_MODE_LABEL"
+            description="COM_RSDIRECTORY_DISQUS_DEVELOPER_MODE_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+    </fieldset>
+        
+    <fieldset name="ratings">
+            
+        <field
+            name="enable_ratings"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_ENABLE_RATINGS_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="enable_reviews"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_ENABLE_REVIEWS_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+    </fieldset>
+        
+    <fieldset name="owner_reply">
+            
+        <field
+            name="enable_owner_reply"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_ENABLE_OWNER_REPLY_LABEL"
+            description="COM_RSDIRECTORY_ENABLE_OWNER_REPLY_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="owner_reply_modal_body_height"
+            type="text"
+            default="350"
+            label="COM_RSDIRECTORY_OWNER_REPLY_MODAL_BODY_HEIGHT_LABEL"
+            description="COM_RSDIRECTORY_OWNER_REPLY_MODAL_BODY_HEIGHT_DESC"
+            filter="integer" />
+            
+    </fieldset>
+        
+    <fieldset name="reporting">
+            
+        <field
+            name="reporting_show_message_box"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_REPORTING_SHOW_MESSAGE_BOX_LABEL"
+            description="COM_RSDIRECTORY_REPORTING_SHOW_MESSAGE_BOX_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="reporting_show_reason_dropdown"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_REPORTING_SHOW_REASON_DROPDOWN_LABEL"
+            description="COM_RSDIRECTORY_REPORTING_SHOW_REASON_DROPDOWN_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="reporting_reasons"
+            type="textarea"
+            class="input-xxlarge"
+            rows="8"
+            label="COM_RSDIRECTORY_REPORTING_REASONS_LABEL"
+            description="COM_RSDIRECTORY_REPORTING_REASONS_DESC" />
+            
+        <field
+            name="reporting_modal_body_height"
+            type="text"
+            default="400"
+            label="COM_RSDIRECTORY_REPORTING_MODAL_BODY_HEIGHT_LABEL"
+            description="COM_RSDIRECTORY_REPORTING_MODAL_BODY_HEIGHT_DESC"
+            filter="integer" />
+                
+    </fieldset>
+        
+    <fieldset name="update">
+            
+        <field
+            name="code"
+            type="text"
+            label="COM_RSDIRECTORY_YOUR_CODE_LABEL"
+            description="COM_RSDIRECTORY_YOUR_CODE_DESC"
+            size="32" />
+            
+    </fieldset>        
+        
+</form>

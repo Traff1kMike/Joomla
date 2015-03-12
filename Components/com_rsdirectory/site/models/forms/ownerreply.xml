@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+			
+		<field
+            name="message"
+            type="editor"
+            label="COM_RSDIRECTORY_MESSAGE"
+            filter="JComponentHelper::filterText" />
+			
+	</fieldset>
+</form>

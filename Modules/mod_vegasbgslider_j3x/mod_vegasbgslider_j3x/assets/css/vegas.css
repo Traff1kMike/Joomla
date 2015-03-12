@@ -1,0 +1,61 @@
+/* =Slider
+-------------------------------------------------------------- */
+.dark.hero { background-color: transparent; }
+.slider-cover { width: 100%; background: #fff; }
+
+#vegas-next, #vegas-prev {
+	position: absolute;
+	display: block;
+	text-indent: -999em;
+	width: 20px;
+	height: 48px;
+	cursor: pointer;
+	top: 50%;
+	margin-top: -24px;
+}
+
+#vegas-next:hover, #vegas-prev:hover {
+	opacity: .5;
+    filter: alpha(opacity=50);
+}
+
+#vegas-next {
+	right: -100px;
+	background: url(../images/next.png) no-repeat center center;
+}
+
+#vegas-prev {
+	left: -100px;
+	background: url(../images/prev.png) no-repeat center center;
+}
+
+
+.vegas-loading {
+	display: none;
+}
+
+.vegas-overlay {
+	opacity: 0.5;
+	z-index: -1;
+}
+
+.vegas-background {
+	-ms-interpolation-mode: bicubic;
+	image-rendering: optimizeQuality;
+    max-width: none !important; /* counteracts global img modification by twitter bootstrap library */
+	z-index: -2;
+}
+
+.vegas-overlay,
+.vegas-background {
+	-webkit-user-select: none;
+	 -khtml-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+
+/* Smaller than 960px */
+@media only screen and (max-width: 959px) {
+	#vegas-prev, #vegas-next { display: none; }
+}

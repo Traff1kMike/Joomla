@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general" addfieldpath="/administrator/components/com_rsdirectory/models/fields">
+			
+		<field
+            name="category_id"
+            type="entrycategory"
+            label="COM_RSDIRECTORY_CATEGORY"
+            filter="integer" />
+            
+        <field
+            name="user_id"
+            type="user"
+            label="COM_RSDIRECTORY_ADD_ENTRY_AUTHOR_LABEL"
+            filter="integer" />
+            
+        <field
+            name="published_time"
+            type="calendar"
+            label="COM_RSDIRECTORY_PUBLISHING_TIME"
+			format="%Y-%m-%d %H:%M:%S"
+            filter="user_utc" />
+            
+        <field
+            name="published"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="JPUBLISHED"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+			
+		<field
+            name="paid"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_PAID"
+			description="COM_RSDIRECTORY_ENTRY_PAID_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+    </fieldset>
+</form>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general" label="COM_RSDIRECTORY_FIELD_PROPERTIES_TAB_GENERAL_LABEL">
+            
+        <field
+            name="name"
+            type="text"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_NAME_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_NAME_DESC"
+            required="true"
+            filter="cmd"
+            size="30" />
+            
+        <field
+            name="listing_caption"
+            type="text"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_LISTING_CAPTION_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_LISTING_CAPTION_DESC"
+            size="255" />
+            
+        <field
+            name="text"
+            type="editor"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_FREE_TEXT_LABEL"
+            filter="JComponentHelper::filterText" />
+            
+        <field
+            name="additional_html_attributes"
+            type="text"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_ADDITIONAL_HTML_ATTRIBUTES_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_ADDITIONAL_HTML_ATTRIBUTES_DESC"
+            size="255" />
+            
+        <field
+            name="published"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_PUBLISHED_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+			
+		<field
+            name="id"
+            type="hidden"
+            default="0"
+            filter="integer" />
+            
+        <field
+            name="field_type_id"
+            type="hidden"
+            default="0"
+            filter="integer" />
+            
+    </fieldset>
+        
+    <fieldset name="forms" label="COM_RSDIRECTORY_FIELD_PROPERTIES_TAB_FORMS_LABEL">
+            
+        <field
+			name="forms"
+            type="forms"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_FORMS_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_FORMS_DESC" />
+            
+    </fieldset>
+</form>

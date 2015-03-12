@@ -1,0 +1,29 @@
+.rsdir-popular-entries {
+    margin-bottom: 12px;
+}
+
+.rsdir-popular-entries.vertical .rsdir-popular-entry {
+    margin-bottom: 10px;
+}
+
+.rsdir-popular-entries .thumbnail {
+    display: inline-block;
+}
+
+.rsdir-popular-entry-body.body-top {
+    margin-bottom: 10px;
+}
+
+.rsdir-popular-entry-price {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.rsdir-popular-entry-title {
+    display: block;
+}
+
+.rsdir-popular-entries .rsdir-no-image {
+    background: no-repeat center center #FBFBF1;
+    display: block;
+}

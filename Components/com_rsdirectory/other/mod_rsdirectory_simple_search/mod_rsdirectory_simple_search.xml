@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade" client="site">
+    <name>mod_rsdirectory_simple_search</name>
+    <creationDate>June 2014</creationDate>
+    <author>RSJoomla!</author>
+    <copyright>(C) 2013-2014 www.rsjoomla.com</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license> 
+    <authorEmail>suport@rsjoomla.com</authorEmail>
+    <authorUrl>http://www.rsjoomla.com</authorUrl>
+    <version>1.0.2</version>
+    <description>MOD_RSDIRECTORY_SIMPLE_SEARCH_DESCRIPTION</description>
+        
+    <files>
+		<filename module="mod_rsdirectory_simple_search">mod_rsdirectory_simple_search.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+    </files>
+        
+    <media destination="mod_rsdirectory_simple_search" folder="media">
+		<folder>css</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+    </media>
+        
+    <languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rsdirectory_simple_search.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rsdirectory_simple_search.sys.ini</language>
+    </languages>
+        
+    <config>
+		<fields name="params">
+				
+			<fieldset name="basic">
+					
+				<field
+					name="itemid"
+					type="text"
+					label="MOD_RSDIRECTORY_SIMPLE_SEARCH_CUSTOM_ITEMID_LABEL"
+					description="MOD_RSDIRECTORY_SIMPLE_SEARCH_CUSTOM_ITEMID_DESC" />
+					
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="MOD_RSDIRECTORY_SIMPLE_SEARCH_CLASS_SUFFIX_LABEL"
+					description="MOD_RSDIRECTORY_SIMPLE_SEARCH_CLASS_SUFFIX_DESC" />
+					
+				<field
+					name="show_categories"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_RSDIRECTORY_SIMPLE_SEARCH_SHOW_CATEGORIES_LABEL"
+					description="MOD_RSDIRECTORY_SIMPLE_SEARCH_SHOW_CATEGORIES_DESC"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+					
+			</fieldset>
+				
+		</fields>
+    </config>
+</extension>

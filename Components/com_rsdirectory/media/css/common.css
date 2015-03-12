@@ -1,0 +1,249 @@
+/* Clearfix */
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content:" ";
+}
+.clearfix:after {
+    clear: both;
+}
+
+/* Some bootstrap CSS (which is not found in the Joomla! bootstrap ) */
+
+.media,
+.media-body {
+	overflow: hidden;
+	*overflow: visible;
+	zoom: 1;
+}
+
+.media,
+.media .media {
+	margin-top: 15px;
+}
+
+.media:first-child {
+	margin-top: 0;
+}
+
+.media-object {
+	display: block;
+}
+
+.media-heading {
+	margin: 0 0 5px;
+}
+
+.media > .pull-left {
+	margin-right: 10px;
+}
+
+.media > .pull-right {
+	margin-left: 10px;
+}
+
+.media-list {
+	margin-left: 0;
+	list-style: none;
+}
+
+.rsdir-field-wrapper {
+	margin-bottom: 20px;
+}
+
+#rsdir-captcha-refresh,
+.rsdir-toggle-help {
+	cursor: pointer;
+}
+
+.rsdir-images-list {
+    margin: 10px 0 0 0 !important;
+	padding: 0 !important;
+}
+
+.rsdir-images-list li {
+    float: left;
+    margin: 0 8px 8px 0 !important;
+    list-style: none;
+    border: 1px solid #cacaca;
+    position: relative;
+	padding: 3px !important;
+}
+
+.rsdir-images-list .rsdir-delete-file {
+	position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+	height: 16px;
+	display: none !important;
+}
+
+.rsdir-images-list .rsdir-image-loader {
+	position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+	height: 16px;
+}
+
+.rsdir-images-list .rsdir-file:hover .rsdir-delete-file {
+	display: block !important;
+}
+
+.rsdir-images-list .rsdir-file:hover .hide.rsdir-delete-file {
+	display: none !important;
+}
+
+.ui-datepicker-calendar tr {
+    border: none;
+}
+
+.rsdir-placeholders-wrapper {
+    position: relative;
+}
+
+.rsdir-placeholders {
+    position: absolute;
+    z-index: 9999;
+    background-color: #eee;
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding-right: 10px;
+    padding: 0 !important;
+	font-size: 13px !important;
+	white-space: normal !important;
+}
+
+.rsdir-placeholders li {
+    padding: 5px 10px !important;
+}
+
+.rsdir-placeholders li:hover {
+    cursor: pointer;
+    background-color: #DFDFDF;
+}
+
+.rsdir-map {
+    margin-top: 15px;
+}
+
+.rsdir-order-files td,
+.rsdir-order-files img {
+    cursor: move;
+}
+
+.rsdir-hide {
+    display: none !important;
+}
+
+.rsdir-block {
+    display: block !important;
+}
+
+.rsdir-required {
+	color: #B94A48;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+[class^="rsdir-icon-"],
+[class*=" rsdir-icon-"] {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.rsdir-icon-x {
+    background: url("../images/icon-16-x.png");
+}
+
+.rsdir-icon-remove {
+    background: url("../images/icon-16-minus.png");
+}
+
+.rsdir-icon-new {
+	background: url("../images/icon-16-plus.png");
+}
+
+.rsdir-files-list {
+    margin: 10px 0 0;
+}
+
+.rsdir-files-list .icon-remove {
+    cursor: pointer;
+    color: #B94A48;
+    background-image: none;
+}
+
+.rsdir-files-list a,
+.rsdir-files-table a {
+    background: transparent url("../images/icon-16-file.png") no-repeat 10px center;
+    padding: 10px 0 10px 35px;
+}
+
+.rsdir-tabs .tab-content > .tab-pane {
+    display: block !important;
+    position: absolute !important;
+    top: -9999px !important;
+	width: 100% !important;
+}
+
+.rsdir-tabs .tab-content > .active {
+    position: static !important;
+    top: auto !important;
+}
+
+.error .rsdir-renew-label {
+    box-shadow: inherit !important;
+    color: inherit !important;
+}
+
+.rsdir-no-image {
+    display: block;
+    background: #FBFBF1 url('../images/no-image.png') no-repeat center center;
+}
+
+.rsdir-file-upload {
+	margin-bottom: 5px;
+}
+
+.rsdir-clear-upload {
+	cursor: pointer;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.rsdir-dropdown {
+	height: auto !important;
+}
+
+.rsdir-map-field {
+	margin-bottom: 5px;	
+}
+
+.rsdir-map-field > div {
+	margin-left: 5px;
+}
+
+.rsdir-map-field > div:first-child {
+	margin-left: 0;
+}
+
+.search-field input {
+	height: 16px !important;
+	margin-bottom: 0 !important;
+}
+
+/* Bootstrap Css Map Fix*/
+.gm-style img { 
+    max-width: none !important;
+}
+/* Bootstrap Css Map Fix*/
+.gm-style label { 
+    width: auto !important;
+    display: inline !important; 
+}

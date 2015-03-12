@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade" client="site">
+    <name>MOD_RSDIRECTORY_ENTRIES_CAROUSEL</name>
+    <creationDate>May 2014</creationDate>
+    <author>RSJoomla!</author>
+    <copyright>(C) 2013-2014 www.rsjoomla.com</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license> 
+    <authorEmail>suport@rsjoomla.com</authorEmail>
+    <authorUrl>http://www.rsjoomla.com</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_RSDIRECTORY_ENTRIES_CAROUSEL_DESCRIPTION</description>
+        
+    <files>
+		<filename module="mod_rsdirectory_entries_carousel">mod_rsdirectory_entries_carousel.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+    </files>
+		
+	<media destination="mod_rsdirectory_entries_carousel" folder="media">
+		<folder>css</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+    </media>
+        
+    <languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rsdirectory_entries_carousel.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rsdirectory_entries_carousel.sys.ini</language>
+    </languages>
+        
+    <config>
+		<fields name="params">
+				
+			<fieldset name="basic">
+					
+				<field
+					name="itemid"
+					type="text"
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_CUSTOM_ITEMID_LABEL" />
+					
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_CLASS_SUFFIX_LABEL"
+					description="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_CLASS_SUFFIX_DESC" />
+					
+				<field
+					name="featured_categories"
+					type="category"
+					extension="com_rsdirectory"
+					multiple="true"
+					size="10"
+					default=""
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_FEATURED_CATEGORIES_LABEL"
+					description="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_FEATURED_CATEGORIES_DESC">
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+					
+				<field
+					name="max_entries"
+					type="text"
+					default="6"
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_MAX_ENTRIES_LABEL"
+					description="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_MAX_ENTRIES_DESC" />
+					
+				<field
+					name="entries_per_slide"
+					type="list"
+					default="3"
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_ENTRIES_PER_SLIDE_LABEL"
+					description="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_ENTRIES_PER_SLIDE_DESC">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="6">6</option>
+					<option value="12">12</option>
+				</field>
+					
+				<field
+					name="order_by"
+					type="list"
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_ORDER_BY_LABEL">
+					<option value="e.title">MOD_RSDIRECTORY_ENTRIES_CAROUSEL_ORDER_BY_TITLE</option>
+					<option value="e.price">MOD_RSDIRECTORY_ENTRIES_CAROUSEL_ORDER_BY_PRICE</option>
+					<option value="e.published_time">MOD_RSDIRECTORY_ENTRIES_CAROUSEL_ORDER_BY_PUBLISHING_DATE</option>
+					<option value="e.expiry_time">MOD_RSDIRECTORY_ENTRIES_CAROUSEL_ORDER_BY_EXPIRY_DATE</option>
+					<option value="rating">MOD_RSDIRECTORY_ENTRIES_CAROUSEL_ORDER_BY_RATING</option>
+					<option value="e.hits">MOD_RSDIRECTORY_ENTRIES_CAROUSEL_ORDER_BY_HITS</option>
+					<option value="author">MOD_RSDIRECTORY_ENTRIES_CAROUSEL_ORDER_BY_AUTHOR</option>
+					<option value="category_title">MOD_RSDIRECTORY_ENTRIES_CAROUSEL_ORDER_BY_CATEGORY</option>
+				</field>
+					
+				<field
+					name="order"
+					type="list"
+					default="3"
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_ENTRIES_ORDER_LABEL">
+					<option value="asc">MOD_RSDIRECTORY_ENTRIES_CAROUSEL_ASC</option>
+					<option value="desc">MOD_RSDIRECTORY_ENTRIES_CAROUSEL_DESC</option>
+				</field>
+					
+				<field
+					name="display_thumbs"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_DISPLAY_THUMBS_LABEL"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+					
+				<field
+					name="thumb_max_width"
+					type="text"
+					default="170"
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_THUMBNAIL_MAX_WIDTH_LABEL" />
+					
+				<field
+					name="display_titles"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_DISPLAY_TITLES_LABEL"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+					
+				<field
+					name="display_prices"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_DISPLAY_PRICES_LABEL"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+					
+				<field
+					name="display_ratings"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_DISPLAY_RATINGS_LABEL"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+					
+				<field
+					name="interval"
+					type="text"
+					default="5000"
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_INTERVAL_LABEL"
+					description="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_INTERVAL_DESC"
+					filter="integer" />
+					
+				<field
+					name="display_indicators"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_DISPLAY_INDICATORS_LABEL"
+					description="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_DISPLAY_INDICATORS_DESC"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+					
+				<field
+					name="display_nav"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_DISPLAY_NAV_LABEL"
+					description="MOD_RSDIRECTORY_ENTRIES_CAROUSEL_DISPLAY_NAV_DESC"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+					
+			</fieldset>
+				
+		</fields>
+    </config>
+</extension>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade" client="site">
+    <name>mod_rsdirectory_popular_entries</name>
+    <creationDate>June 2014</creationDate>
+    <author>RSJoomla!</author>
+    <copyright>(C) 2013-2014 www.rsjoomla.com</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license> 
+    <authorEmail>suport@rsjoomla.com</authorEmail>
+    <authorUrl>http://www.rsjoomla.com</authorUrl>
+    <version>1.0.2</version>
+    <description>MOD_RSDIRECTORY_POPULAR_ENTRIES_DESCRIPTION</description>
+        
+    <files>
+		<filename module="mod_rsdirectory_popular_entries">mod_rsdirectory_popular_entries.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+    </files>
+		
+	<media destination="mod_rsdirectory_popular_entries" folder="media">
+		<folder>css</folder>
+		<filename>index.html</filename>
+    </media>
+        
+    <languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rsdirectory_popular_entries.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rsdirectory_popular_entries.sys.ini</language>
+    </languages>
+         
+    <config>
+		<fields name="params">
+				
+			<fieldset name="basic">
+					
+				<field
+					name="itemid"
+					type="text"
+					label="MOD_RSDIRECTORY_POPULAR_ENTRIES_CUSTOM_ITEMID_LABEL" />
+					
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="MOD_RSDIRECTORY_POPULAR_ENTRIES_CLASS_SUFFIX_LABEL"
+					description="MOD_RSDIRECTORY_POPULAR_ENTRIES_CLASS_SUFFIX_DESC" />
+					
+				<field
+					name="featured_categories"
+					type="category"
+					extension="com_rsdirectory"
+					multiple="true"
+					size="10"
+					default=""
+					label="MOD_RSDIRECTORY_POPULAR_ENTRIES_FEATURED_CATEGORIES_LABEL"
+					description="MOD_RSDIRECTORY_POPULAR_ENTRIES_FEATURED_CATEGORIES_DESC" >
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+					
+				<field
+					name="max_entries"
+					type="list"
+					default="3"
+					label="MOD_RSDIRECTORY_POPULAR_ENTRIES_MAX_ENTRIES_LABEL"
+					description="MOD_RSDIRECTORY_POPULAR_ENTRIES_MAX_ENTRIES_DESC"
+					filter="integer">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="6">6</option>
+					<option value="12">12</option>
+				</field>
+					
+				<field
+					name="display"
+					type="list"
+					default="horizontal"
+					label="MOD_RSDIRECTORY_POPULAR_ENTRIES_DISPLAY_LABEL"
+					description="MOD_RSDIRECTORY_POPULAR_ENTRIES_DISPLAY_DESC">
+					<option value="horizontal">MOD_RSDIRECTORY_POPULAR_ENTRIES_HORIZONTAL</option>
+					<option value="vertical">MOD_RSDIRECTORY_POPULAR_ENTRIES_VERTICAL</option>
+				</field>
+					
+				<field
+					name="display_thumbs"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_RSDIRECTORY_POPULAR_ENTRIES_DISPLAY_THUMBS_LABEL"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+					
+				<field
+					name="thumb_max_width"
+					type="text"
+					default="50"
+					label="MOD_RSDIRECTORY_POPULAR_ENTRIES_THUMBNAIL_MAX_WIDTH_LABEL" />
+					
+				<field
+					name="thumb_position"
+					type="list"
+					default="left"
+					label="MOD_RSDIRECTORY_POPULAR_ENTRIES_THUMB_POSITION_LABEL">
+					<option value="top">MOD_RSDIRECTORY_POPULAR_ENTRIES_THUMB_POSITION_TOP</option>
+					<option value="right">MOD_RSDIRECTORY_POPULAR_ENTRIES_THUMB_POSITION_RIGHT</option>
+					<option value="bottom">MOD_RSDIRECTORY_POPULAR_ENTRIES_THUMB_POSITION_BOTTOM</option>
+					<option value="left">MOD_RSDIRECTORY_POPULAR_ENTRIES_THUMB_POSITION_LEFT</option>
+				</field>
+					
+				<field
+					name="display_titles"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_RSDIRECTORY_POPULAR_ENTRIES_DISPLAY_TITLES_LABEL"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+					
+				<field
+					name="display_prices"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_RSDIRECTORY_POPULAR_ENTRIES_DISPLAY_PRICES_LABEL"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+					
+				<field
+					name="display_hits"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_RSDIRECTORY_POPULAR_ENTRIES_DISPLAY_HITS_LABEL"
+					filter="integer">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+					
+			</fieldset>
+				 
+		</fields>
+    </config>
+</extension>

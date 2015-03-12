@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+            
+        <field
+            name="title"
+            type="text"
+            label="COM_RSDIRECTORY_FORM_TITLE_LABEL"
+            description="COM_RSDIRECTORY_FORM_TITLE_DESC"
+            required="true"
+            size="30" />
+            
+        <field
+            name="id"
+            type="hidden"
+            default="0"
+            filter="integer" />
+            
+    </fieldset>
+        
+    <fieldset name="form_fields" addfieldpath="/administrator/components/com_rsdirectory/models/fields">
+            
+        <field
+            name="form_fields"
+            type="fieldslist"
+            multiple="true"
+            label="COM_RSDIRECTORY_FORM_FIELDS_LABEL"
+            description="COM_RSDIRECTORY_FORM_FIELDS_DESC" />
+            
+    </fieldset>
+        
+    <fieldset name="listing_general_layout">
+            
+        <field
+            name="use_title_template"
+            type="radio"
+            class="use-template-checkbox btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_FORM_USE_TITLE_TEMPLATE_LABEL"
+            description="COM_RSDIRECTORY_FORM_USE_TITLE_TEMPLATE_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="title_template"
+            class="wide-textbox"
+            type="text"
+            label="COM_RSDIRECTORY_FORM_TITLE_TEMPLATE_LABEL"
+            description="COM_RSDIRECTORY_FORM_ENTRY_TITLES_DESC" />
+            
+        <field
+            name="use_big_subtitle_template"
+            type="radio"
+            class="use-template-checkbox btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_FORM_USE_BIG_SUBTITLE_TEMPLATE_LABEL"
+            description="COM_RSDIRECTORY_FORM_USE_BIG_SUBTITLE_TEMPLATE_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="big_subtitle_template"
+            type="textarea"
+            class="input-xxlarge"
+            rows="8"
+            label="COM_RSDIRECTORY_FORM_BIG_SUBTITLE_LABEL"
+            description="COM_RSDIRECTORY_FORM_BIG_SUBTITLE_DESC"
+            filter="JComponentHelper::filterText" />
+            
+        <field
+            name="use_small_subtitle_template"
+            type="radio"
+            class="use-template-checkbox btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_FORM_USE_SMALL_SUBTITLE_TEMPLATE_LABEL"
+            description="COM_RSDIRECTORY_FORM_USE_SMALL_SUBTITLE_TEMPLATE_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="small_subtitle_template"
+            type="textarea"
+            class="input-xxlarge"
+            rows="8"
+            label="COM_RSDIRECTORY_FORM_SMALL_SUBTITLE_TEMPLATE_LABEL"
+            description="COM_RSDIRECTORY_FORM_SMALL_SUBTITLE_TEMPLATE_DESC"
+            filter="JComponentHelper::filterText" />
+            
+        <field
+            name="use_description_template"
+            type="radio"
+            class="use-template-checkbox btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_FORM_USE_DESCRIPTION_TEMPLATE_LABEL"
+            description="COM_RSDIRECTORY_FORM_USE_DESCRIPTION_TEMPLATE_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="description_template"
+            type="editor"
+            label="COM_RSDIRECTORY_FORM_DESCRIPTION_TEMPLATE_LABEL"
+            description="COM_RSDIRECTORY_FORM_DESCRIPTION_TEMPLATE_DESC"
+            filter="JComponentHelper::filterText" />
+            
+    </fieldset>
+        
+    <fieldset name="listing_row_layout">
+            
+        <field
+            name="listing_row_show_big_subtitle"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_BIG_SUBTITLE_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_row_show_small_subtitle"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_SMALL_SUBTITLE_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_row_show_thumbnails"
+            type="radio"
+            class="listing-row-show-thumbnails btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_THUMBNAILS_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_row_show_images_number"
+            type="radio"
+            class="listing-row-show-images-number btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_LISTING_ROW_SHOW_IMAGES_NUMBER_LABEL"
+            description="COM_RSDIRECTORY_FORM_LISTING_ROW_SHOW_IMAGES_NUMBER_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_row_show_price"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_PRICE_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_row_show_publishing_time"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_PUBLISHING_TIME_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_row_show_expiry_time"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_EXPIRY_TIME_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_row_show_favorites_button"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_FAVORITES_BUTTON_LABEL"
+            description="COM_RSDIRECTORY_FORM_SHOW_FAVORITES_BUTTON_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_row_show_ratings"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_RATINGS_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_row_show_entry_details_link"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_ENTRY_DETAILS_LINK_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_row_show_author"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_AUTHOR_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_row_show_category"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_CATEGORY_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+    </fieldset>
+        
+    <fieldset name="listing_detail_layout">
+            
+        <field
+            name="listing_detail_show_title"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_TITLE_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_big_subtitle"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_BIG_SUBTITLE_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_small_subtitle"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_SMALL_SUBTITLE_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_description"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_DESCRIPTION_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_breadcrumb"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_BREADCRUMB_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_gallery"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_GALLERY_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_price"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_PRICE_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_publishing_time"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_PUBLISHING_TIME_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_expiry_time"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_EXPIRY_TIME_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_favorites_button"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_FAVORITES_BUTTON_LABEL"
+            description="COM_RSDIRECTORY_FORM_SHOW_FAVORITES_BUTTON_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_ratings"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_RATINGS_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_author"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_AUTHOR_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_category"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_CATEGORY_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_recommend"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_RECOMMEND_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_report"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_REPORT_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_print"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_PRINT_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_hits"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_HITS_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="listing_detail_show_contact"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FORM_SHOW_CONTACT_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+    </fieldset>
+        
+    <fieldset name="listing_detail_custom_fields" addfieldpath="/administrator/components/com_rsdirectory/models/fields">
+            
+        <field
+            name="listing_detail_custom_fields"
+            type="customfieldslist"
+            multiple="true"
+            label="COM_RSDIRECTORY_FORM_CUSTOM_FORM_FIELDS_LABEL"
+            description="COM_RSDIRECTORY_FORM_CUSTOM_FORM_FIELDS_DESC" />
+            
+    </fieldset>
+        
+    <fieldset name="entry_submit">
+            
+        <field
+            name="entry_submit_thank_you_message"
+            type="editor"
+            default="Thank you! Your entry has been successfully added! Click &lt;a href=&quot;{url}&quot;&gt;here&lt;/a&gt; to view it."
+            label="COM_RSDIRECTORY_ENTRY_SUBMIT_THANK_YOU_MESSAGE_LABEL"
+            description="COM_RSDIRECTORY_ENTRY_SUBMIT_THANK_YOU_MESSAGE_DESC"
+            filter="JComponentHelper::filterText"
+            required="true"
+            hide="readmore,pagebreak" />
+            
+    </fieldset>
+        
+    <fieldset name="contact">
+            
+        <field
+            name="contact_from_name"
+            type="text"
+            default="{contact.name}"
+            label="COM_RSDIRECTORY_CONTACT_FROM_NAME_LABEL"
+            description="COM_RSDIRECTORY_CONTACT_FROM_NAME_DESC"
+            size="30" />
+            
+        <field
+            name="contact_from_email"
+            type="text"
+            default="{contact.email}"
+            label="COM_RSDIRECTORY_CONTACT_FROM_EMAIL_LABEL"
+            description="COM_RSDIRECTORY_CONTACT_FROM_EMAIL_DESC"
+            required="true"
+            size="30" />
+            
+        <field
+            name="contact_to_name"
+            type="text"
+            default="{name}"
+            label="COM_RSDIRECTORY_CONTACT_TO_NAME_LABEL"
+            description="COM_RSDIRECTORY_CONTACT_TO_NAME_DESC"
+            size="30" />
+            
+        <field
+            name="contact_to_email"
+            type="text"
+            default="{email}"
+            label="COM_RSDIRECTORY_CONTACT_TO_EMAIL_LABEL"
+            description="COM_RSDIRECTORY_CONTACT_TO_EMAIL_DESC"
+            required="true"
+            size="30" />
+            
+        <field
+            name="contact_cc"
+            type="text"
+            label="COM_RSDIRECTORY_CONTACT_CC_LABEL"
+            description="COM_RSDIRECTORY_CONTACT_CC_DESC"
+            size="30" />
+            
+        <field
+            name="contact_bcc"
+            type="text"
+            label="COM_RSDIRECTORY_CONTACT_BCC_LABEL"
+            description="COM_RSDIRECTORY_CONTACT_BCC_DESC"
+            size="30" />
+            
+        <field
+            name="contact_subject"
+            type="text"
+            default="Contact message from your entry {title}"
+            label="COM_RSDIRECTORY_CONTACT_SUBJECT_LABEL"
+            description="COM_RSDIRECTORY_CONTACT_SUBJECT_DESC"
+            size="30" />
+            
+        <field
+            name="contact_send_html"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_CONTACT_SEND_HTML_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="contact_message"
+            type="editor"
+            default="&lt;p&gt;From: {contact.name} ({contact.email})&lt;/p&gt;&lt;p&gt;Message body:&lt;br /&gt;{contact.message}&lt;/p&gt;&lt;p&gt;---&lt;br /&gt;This email was sent via the contact form on &lt;a href='{url}'&gt;{title}&lt;/a&gt;&lt;/p&gt;"
+            label="COM_RSDIRECTORY_CONTACT_MESSAGE_LABEL"
+            description="COM_RSDIRECTORY_CONTACT_MESSAGE_DESC"
+            filter="JComponentHelper::filterText"
+            required="true"
+            hide="readmore,pagebreak" />
+            
+    </fieldset>
+        
+</form>

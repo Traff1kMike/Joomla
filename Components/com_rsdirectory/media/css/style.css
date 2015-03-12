@@ -1,0 +1,373 @@
+#adminForm {
+    position: relative;
+}
+
+.rsdir-entry,
+.rsdir-credit-package {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cacaca;
+}
+
+#rs_whats_csc {
+    border-bottom: 1px dotted #666;
+    cursor: pointer;
+}
+
+#rs_tt {
+    padding: 10px;
+    background-color: #FFF;
+    border: 1px solid #E6E6E6;
+    display: block;
+    position: absolute;
+}
+
+.rsdir-categories-list {
+    list-style: none !important;
+    margin: 0 !important;
+}
+
+.recaptchatable td {
+    line-height: normal !important;
+}
+
+.rsdir-listing {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    padding: 10px;
+    position: relative;
+}
+
+.rsdir-listings > .row-fluid:nth-child(odd) > .rsdir-listing {
+    background-color:#fbfbf1;
+}
+
+.rsdir-listing-promoted {
+    border: 2px solid #3A87AD;
+    background-color: #FBFBF1;
+    padding: 10px 8px;
+}
+
+.rsdir-listing-unpublished,
+.rsdir-listing-expired {
+    background-color: #FBEEEE !important;
+}
+
+
+.rsdir-listing-thumb-wrapper {
+    margin-bottom: 10px;
+}
+
+.rsdir-listing .thumbnail {
+    position: relative;
+    margin: 0 auto 9px auto;
+}
+
+.rsdir-listing-images-count {
+    position: absolute;
+    background-color: #eee;
+    color: #b5b5b5;
+    bottom: 4px;
+    right: 4px;
+    width: 25px;
+    text-align: center;
+    padding: 4px;
+}
+
+.rsdir-listing-title {
+    font-weight: normal;
+    font-family: Arial;
+    font-size: 17px;
+    margin-top: 0;
+}
+
+.rsdir-listing-big-subtitle {
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.rsdir-listing-small-subtitle {
+    margin: 12px 0;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.rsdir-listing-rating-wrap {
+    margin-bottom: 12px;
+    line-height: 19px;
+    height: 24px;
+}
+
+.rsdir-listing-rating {
+    display: inline-block;
+}
+
+.rsdir-listing-price,
+.rsdir-detail-price {
+    background-color: #197baf;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    padding: 6px 8px;
+}
+
+.rsdir-listing-price-label,
+.rsdir-detail-price-label {
+    color: #75b8dc;
+}
+
+.rsdir-listing-expiry-date {
+    font-size: 14px;
+    font-family: Arial;
+    font-weight: bold;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.rsdir-detail-expiry-date {
+    font-size: 14px;
+    font-family: Arial;
+    font-weight: bold;
+    padding: 6px 8px 0 8px;
+}
+
+.rsdir-listing-expiry-date-label {
+    color: #b2b2b2;
+}
+
+.rsdir-listing-meta,
+.rsdir-detail-meta {
+    font-family: Arial;
+    font-size: 12px;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 970px) {
+    .rsdir-listing-rating-wrap {
+        text-align: center;
+    }
+}
+
+#rsdir-gallery .thumbnails {
+    margin: auto auto 10px auto;
+}
+
+#rsdir-gallery .thumbnail {
+    cursor: pointer;
+}
+
+.rsdir-detail-title {
+    font-family: Arial;
+    font-size: 20px;
+}
+
+.rsdir-detail-section,
+.rsdir-detail-section-title {
+    font-family: Arial;
+    border-bottom: 1px solid #eee;
+    margin: 14px 0 10px 0;
+    padding-bottom: 15px;
+}
+
+.rsdir-detail-big-subtitle,
+.rsdir-detail-section-title {
+    font-size: 16px;
+}
+
+.rsdir-youtube-video {
+    margin-bottom: 15px;
+}
+
+.rsdir-price-wrapper {
+    background-color: #f2f2f2;
+}
+
+#rsdir-detail-social {
+    line-height: 24px;
+    padding-bottom: 10px;
+}
+
+#rsdir-recommend {
+    margin: 0;
+}
+
+#rsdir-recommend li {
+    float: left;
+    list-style: none;
+    margin-right: 10px;
+    line-height: 24px;
+}
+
+.rsdir-recommend-facebook,
+.rsdir-recommend-twitter {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.rsdir-recommend-facebook,
+.rsdir-recommend-facebook:hover {
+    background: transparent url(../images/icon-24-facebook.png) no-repeat left top !important;
+}
+
+.rsdir-recommend-twitter,
+.rsdir-recommend-twitter:hover {
+    background: transparent url(../images/icon-24-twitter.png) no-repeat left top !important;
+}
+
+.rsdir-detail-rating-wrapper {
+    line-height: 16px;
+}
+
+.rsdir-detail-rating {
+    display: inline-block;
+    width: 96px !important;
+}
+
+.rsdir-detail-rating > img {
+    float: left;
+}
+
+.rsdir-detail-caption {
+    font-weight: bold;
+}
+
+.rsdir-detail-value {
+    display: inline;
+}
+
+.fb-comments, .fb-comments iframe[style], .fb-like-box, .fb-like-box iframe[style] {width: 100% !important;}
+.fb-comments span, .fb-comments iframe span[style], .fb-like-box span, .fb-like-box iframe span[style] {width: 100% !important;}
+
+.rsdir-transaction-details .control-label {
+    padding-top: 0 !important;
+}
+
+.rsdir-transaction-details .label {
+    font-size: inherit;
+}
+
+.media .media,
+.media .media-more,
+.media .media-less {
+    margin-left: 30px;
+}
+
+.rsdir-categories-list .media {
+    margin-top: 0 !important;
+}
+
+.rsdir-filter-bar select {
+    margin-left: 5px !important;
+}
+
+.rsdir-sep {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+    border-image: none;
+    border-left: 0 none;
+    border-right: 0 none;
+    border-style: solid none;
+    border-width: 1px 0;
+    margin: 20px 10%;
+}
+
+.control-group .rsdir-placeholders {
+	margin-top: -9px !important;
+}
+
+.rsdir-info-window {
+    overflow: hidden;
+}
+
+.rsdir-load-more {
+    text-align: center;
+}
+
+.rsdir-load-more .btn {
+    width: 40%;
+}
+
+.mfp-s-loading .mfp-arrow { 
+   display: none;
+}
+
+#rsdir-captcha-refresh:before,
+.rsdir-toggle-help:before,
+.rsdir-add-file-upload .icon-plus:before,
+.rsdir-entry-fav .icon-star:before,
+.rsdir-entry-fav .icon-star-empty:before {
+	content: none !important;
+}
+
+#rsdir-captcha-refresh,
+.rsdir-toggle-help,
+.rsdir-add-file-upload .icon-plus,
+.rsdir-entry-fav .icon-star,
+.rsdir-entry-fav .icon-star-empty {
+	background-image: url(../images/glyphicons-halflings.png) !important;
+	background-repeat: no-repeat !important;
+	display: inline-block !important;
+	height: 14px !important;
+	line-height: 14px !important;
+	margin-top: 1px !important;
+	vertical-align: text-top !important;
+	width: 14px !important;
+}
+
+#rsdir-captcha-refresh {
+	background-position: -240px -23px !important;
+}
+
+.rsdir-toggle-help {
+  background-position: -96px -96px !important;
+}
+
+.rsdir-add-file-upload .icon-plus {
+	background-position: -408px -96px !important;
+}
+
+.rsdir-entry-fav .icon-star {
+    background-position: -120px 0 !important;
+}
+
+.rsdir-entry-fav .icon-star-empty {
+    background-position: -144px 0 !important;
+}
+
+.rsdir .form-horizontal .control-label {
+    text-align: left;
+}
+
+.rsdir .controls > .radio:first-child,
+.rsdir .controls > .checkbox:first-child {
+    padding-top: 0;
+}
+
+.rsdir-filter-caption {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.rsdir-filter-more {
+    display: block;
+}
+
+.rsdir-filter-more.for-inline {
+    margin-top: 5px;
+}
+
+.rsdir-iframe-modal .modal-body {
+	max-height: none;
+}
+
+.rsdir-iframe-modal iframe {
+	border: none;
+	width: 100%;
+}

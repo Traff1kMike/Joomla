@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_RSDIRECTORY_ENTRY_VIEW_EDIT_TITLE">
+		<message>
+			<![CDATA[COM_RSDIRECTORY_ENTRY_VIEW_EDIT_DESC]]>
+		</message>
+    </layout>
+        
+    <fields name="params">
+		<fieldset name="basic">
+				
+			<field
+				name="catid"
+				type="category"
+				extension="com_rsdirectory"
+				published="1"
+				label="COM_RSDIRECTORY_ADD_ENTRY_SELECT_CATEGORY_LABEL"
+				description="COM_RSDIRECTORY_ADD_ENTRY_SELECT_CATEGORY_DESC">
+				<option value="0">JOPTION_SELECT_CATEGORY</option>
+			</field>
+			
+			<field name="display_login_form" type="radio" class="btn-group" default="1" label="COM_RSDIRECTORY_PARAM_DISPLAY_LOGIN_FORM" description="COM_RSDIRECTORY_PARAM_DISPLAY_LOGIN_FORM_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+				
+		</fieldset>
+    </fields>
+        
+</metadata>

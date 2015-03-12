@@ -1,0 +1,109 @@
+.rsdir .btn-group {
+	font-size: 13px !important;	
+}
+
+.rsdir .btn-group label {
+	float: none !important;
+	display: inline-block !important;
+	min-width: inherit !important;
+}
+
+.rsdir .btn-group input {
+	float: none !important;
+	display: inline-block !important;
+}
+
+.rsdir .button2-left {
+	margin: 4px;
+}
+
+.rsdir .media-preview {
+	margin: 8px 4px;
+}
+
+.rsdir fieldset.checkboxes,
+.rsdir fieldset.radio {
+	float: none !important;
+	margin: 0 !important;
+}
+
+.rsdir fieldset.checkboxes ul,
+.rsdir fieldset.radio ul {
+	margin: 0 !important;
+}
+
+.rsdir fieldset.checkboxes li,
+.rsdir fieldset.radio li {
+	padding: 0 0 5px 0 !important;
+	line-height: inherit !important;
+}
+
+.rsdir fieldset.checkboxes input,
+.rsdir fieldset.radio input {
+	display: inline-block !important;
+	margin: 0 10px 0 0 !important;
+}
+
+.rsdir fieldset.checkboxes label,
+.rsdir fieldset.radio label {
+	float: none !important;
+	display: inline-block !important;
+	line-height: inherit !important;
+	margin: 0 !important;
+}
+
+.rsdir .progress-label {
+	line-height: 18px;
+}
+
+.rsdir fieldset label {
+	float: none !important;
+	min-width: inherit !important;
+}
+
+.rsdir fieldset input,
+.rsdir fieldset textarea,
+.rsdir fieldset select,
+.rsdir fieldset img,
+.rsdir fieldset button {
+	float: none !important;
+}
+
+.rsdir .ui-datepicker-trigger img {
+	margin: 2px auto !important;
+}
+
+#jform_score img {
+	margin: 0 auto;
+}
+
+.rsdir input[type="file"] {
+	background: inherit;
+	border: inherit;
+}
+
+.rsdir select {
+	padding: 5px 6px !important;
+}
+
+.rsdir .form-inline-header .control-group,
+.rsdir .form-inline-header .control-label,
+.rsdir .form-inline-header .controls {
+    display: inline-block;
+}
+
+.rsdir .form-inline-header .controls {
+    padding-right: 20px;
+}
+
+.rsdir .form-inline-header .control-label {
+    padding-right: 10px;
+}
+
+.rsdir .form-vertical .control-label {
+	float: none !important;
+}
+
+.rsdir .form-vertical .controls {
+	margin-left: 0 !important;
+}

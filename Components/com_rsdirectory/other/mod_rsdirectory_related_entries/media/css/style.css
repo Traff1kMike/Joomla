@@ -1,0 +1,29 @@
+.rsdir-related-entries {
+    margin-bottom: 12px;
+}
+
+.rsdir-related-entries.vertical .rsdir-related-entry {
+    margin-bottom: 10px;
+}
+
+.rsdir-related-entries .thumbnail {
+    display: inline-block;
+}
+
+.rsdir-related-entry-body.body-top {
+    margin-bottom: 10px;
+}
+
+.rsdir-related-entry-price {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.rsdir-related-entry-title {
+    display: block;
+}
+
+.rsdir-related-entries .rsdir-no-image {
+    background: no-repeat center center #FBFBF1;
+    display: block;
+}

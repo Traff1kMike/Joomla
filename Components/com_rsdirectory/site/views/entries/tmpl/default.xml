@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_RSDIRECTORY_ENTRIES_VIEW_DEFAULT_TITLE" >
+		<message>
+			<![CDATA[COM_RSDIRECTORY_ENTRIES_VIEW_DEFAULT_DESC]]>
+		</message>
+    </layout>
+        
+    <!-- Add fields to the parameters object for the layout. -->
+    <fields name="params">
+		<fieldset name="advanced" label="COM_MENUS_LAYOUT_FEATURED_OPTIONS">
+			<field
+				name="featured_categories"
+				type="category"
+				extension="com_rsdirectory"
+				multiple="true"
+				size="10"
+				default=""
+				label="COM_RSDIRECTORY_FEATURED_CATEGORIES_LABEL"
+				description="COM_RSDIRECTORY_FEATURED_CATEGORIES_DESC" >
+				<option value="">JOPTION_ALL_CATEGORIES</option>
+			</field>
+				
+			<field
+				name="orderby_pri"
+				type="list"
+				description="JGLOBAL_CATEGORY_ORDER_DESC"
+				label="JGLOBAL_CATEGORY_ORDER_LABEL">
+				<option value="none">JGLOBAL_NO_ORDER</option>
+				<option value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+				<option value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+				<option value="order">JGLOBAL_CATEGORY_MANAGER_ORDER</option>
+			</field>
+				
+			<field
+				name="order_by"
+				type="list"
+				default="e.published_time"
+				label="COM_RSDIRECTORY_ENTRY_ORDER_LABEL"
+				description="COM_RSDIRECTORY_ENTRY_ORDER_DESC">
+				<option value="e.published_time">COM_RSDIRECTORY_DATE_PUBLISHED</option>
+				<option value="e.expiry_time">COM_RSDIRECTORY_EXPIRY_DATE</option>
+				<option value="e.title">JGLOBAL_TITLE</option>
+				<option value="author">JAUTHOR</option>
+				<option value="e.hits">JGLOBAL_HITS</option>
+			</field>
+				
+			<field
+				name="order_dir"
+				type="list"
+				default="desc"
+				label="COM_RSDIRECTORY_ENTRY_ORDER_DIRECTION_LABEL"
+				description="COM_RSDIRECTORY_ENTRY_ORDER_DIRECTION_DESC">
+				<option value="asc">COM_RSDIRECTORY_ASC</option>
+				<option value="desc">COM_RSDIRECTORY_DESC</option>
+			</field>
+				
+			<field
+				name="show_ordering"
+				type="radio"
+				class="btn-group"
+				default="1"
+				label="COM_RSDIRECTORY_SHOW_ORDERING_LABEL"
+				description="COM_RSDIRECTORY_SHOW_ORDERING_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+				
+			<field
+				name="show_pagination"
+				type="list"         
+				description="JGLOBAL_PAGINATION_DESC"
+				label="JGLOBAL_PAGINATION_LABEL">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+				<option value="2">JGLOBAL_AUTO</option>
+			</field>
+				
+			<field
+				name="show_pagination_results"
+				type="list"
+				label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+				description="JGLOBAL_PAGINATION_RESULTS_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+		</fieldset>
+			
+		<fieldset name="integration">
+			<field
+				name="show_feed_link"
+				type="list"
+				description="JGLOBAL_SHOW_FEED_LINK_DESC"
+				label="JGLOBAL_SHOW_FEED_LINK_LABEL">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+		</fieldset>
+            
+    </fields>
+        
+</metadata>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_RSDIRECTORY_LIST_VIEW_DEFAULT_TITLE" >
+		<message>
+			<![CDATA[COM_RSDIRECTORY_LIST_VIEW_DEFAULT_DESC]]>
+		</message>
+    </layout>
+        
+    <!-- Add fields to the request variables for the layout. -->
+    <fields name="request">
+         <fieldset name="request" addfieldpath="/administrator/components/com_rsdirectory/models/fields">
+                
+			<field
+				name="id"
+				type="modal_field"
+				label="COM_RSDIRECTORY_SELECT_FIELD_LABEL"
+				description="COM_RSDIRECTORY_SELECT_FIELD_DESC"
+				required="true" />
+                    
+         </fieldset>
+    </fields>
+		
+	<!-- Add fields to the parameters object for the layout. -->
+    <fields name="params">
+			
+		<fieldset name="basic" addfieldpath="/administrator/components/com_rsdirectory/models/fields">
+				
+			<field
+				name="itemid"
+				type="text"
+				label="COM_RSDIRECTORY_CUSTOM_ITEMID_LABEL"
+				description="COM_RSDIRECTORY_CATEGORIES_CUSTOM_ITEMID_DESC" />
+				
+			<field
+				name="show_description"
+				type="radio"
+				class="btn-group"
+				default="1"
+				label="COM_RSDIRECTORY_FIELDS_SHOW_DESCRIPTION_LABEL"
+				filter="integer">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+				
+			<field
+				name="description"
+				type="rseditor"
+				label="COM_RSDIRECTORY_FIELDS_DESCRIPTION_LABEL"
+				description="COM_RSDIRECTORY_FIELDS_DESCRIPTION_DESC"
+				filter="JComponentHelper::filterText" />
+				
+		</fieldset>
+			
+		<fieldset name="layout" label="COM_MENUS_LAYOUT_FEATURED_OPTIONS">
+				
+			<field
+				name="num_columns"
+				type="list"
+				default="3"
+				label="COM_RSDIRECTORY_NUM_COLUMNS_LABEL"
+				description="COM_RSDIRECTORY_NUM_COLUMNS_DESC"
+				filter="integer">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="6">6</option>
+				<option value="12">12</option>
+			</field>
+				
+			<field
+				name="multi_column_order"
+				type="list"
+				label="COM_RSDIRECTORY_MULTI_COLUMN_ORDER_LABEL"
+				description="COM_RSDIRECTORY_MULTI_COLUMN_ORDER_DESC">
+				<option value="0">JGLOBAL_DOWN</option>
+				<option value="1">JGLOBAL_ACROSS</option>
+			</field>
+				
+			<field
+				name="num_entries"
+				type="list"
+				label="COM_RSDIRECTORY_FIELDS_NUM_ENTRIES_LABEL"
+				description="COM_RSDIRECTORY_FIELDS_NUM_ENTRIES_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+				
+		</fieldset>
+			
+    </fields>
+		
+</metadata>

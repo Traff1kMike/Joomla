@@ -1,0 +1,41 @@
+.rsdir-filter-form .chzn-container ul {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.rsdir-filtering-categories {
+    display: none;
+    width: 200px !important;
+    max-width: 100%;
+}
+
+.rsdir-range-filter .rsdir-custom-range {
+    margin:-10px 2px 0 0;
+}
+
+.rsdir-range-filter .icon-search:before {
+    content: none;
+}
+
+.rsdir-range-filter .icon-search {
+    cursor: pointer;
+}
+
+.rsdir-filter-caption {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.rsdir-filter-more {
+    display: block;
+}
+
+.rsdir-filter-more.for-inline {
+    margin-top: 5px;
+}
+
+.rsdir-filter-form .rsdir-dropdown,
+.rsdir-filter-form .rsdir-textbox {
+    width: 100%;
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+	<name>COM_RSDIRECTORY</name>
+	<creationDate>June 2014</creationDate>
+	<author>RSJoomla!</author>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>www.rsjoomla.com</authorUrl>
+	<copyright>(C) 2013-2014 www.rsjoomla.com</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license> 
+	<version>1.4.3</version>
+	<description>COM_RSDIRECTORY_XML_DESCRIPTION</description>
+	<scriptfile>script.rsdirectory.php</scriptfile>
+		
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/mysql/install.sql</file>
+		</sql>
+	</install>
+		
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/mysql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+		
+	<files folder="site">
+		<folder>controllers</folder>
+		<folder>files</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<filename>rsdirectory.php</filename>
+	</files>
+		
+	<media destination="com_rsdirectory" folder="media">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+	</media>
+		
+	<languages>
+		<language tag="en-GB">site/language/en-GB/en-GB.com_rsdirectory.ini</language>
+	</languages>
+		
+	<administration>
+		<menu img="../media/com_rsdirectory/images/icon-16-rsdirectory.png">COM_RSDIRECTORY</menu>
+		<submenu>
+			<menu link="option=com_rsdirectory" alt="RSDirectory!/Dashboard">COM_RSDIRECTORY_DASHBOARD</menu>
+			<menu view="entries" alt="RSDirectory!/Entries">COM_RSDIRECTORY_ENTRIES</menu>
+			<menu view="reportedentries" alt="RSDirectory!/Reported Entries">COM_RSDIRECTORY_REPORTED_ENTRIES</menu>
+			<menu view="ratings" alt="RSDirectory!/Ratings and Reviews">COM_RSDIRECTORY_RATINGS_AND_REVIEWS</menu>
+			<menu view="users" alt="RSDirectory!/Users">COM_RSDIRECTORY_USERS</menu>
+			<menu view="transactions" alt="RSDirectory!/Transactions">COM_RSDIRECTORY_TRANSACTIONS</menu>
+			<menu view="creditshistory" alt="RSDirectory!/Credits History">COM_RSDIRECTORY_CREDITS_HISTORY</menu>
+			<menu view="fields" alt="RSDirectory!/Fields">COM_RSDIRECTORY_FIELDS</menu>
+			<menu view="forms" alt="RSDirectory!/Forms">COM_RSDIRECTORY_FORMS</menu>
+			<menu view="categories" alt="RSDirectory!/Categories">COM_RSDIRECTORY_CATEGORIES</menu>
+			<menu view="groups" alt="RSDirectory!/Groups">COM_RSDIRECTORY_GROUPS</menu>
+			<menu view="creditpackages" alt="RSDirectory!/Credit Packages">COM_RSDIRECTORY_CREDIT_PACKAGES</menu>
+			<menu view="emailmessages" alt="RSDirectory!/Email Messages">COM_RSDIRECTORY_EMAIL_MESSAGES</menu>
+			<menu view="configuration" alt="RSDirectory!/Configuration">COM_RSDIRECTORY_CONFIGURATION</menu>
+			<menu view="tools" alt="RSDirectory!/Tools">COM_RSDIRECTORY_TOOLS</menu>
+			<menu view="updates" alt="RSDirectory!/Updates">COM_RSDIRECTORY_UPDATES</menu>
+		</submenu>
+			
+		<files folder="admin">
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>rsdirectory.php</filename>
+		</files>
+		<languages>
+			<language tag="en-GB">admin/language/en-GB/en-GB.com_rsdirectory.ini</language>
+			<language tag="en-GB">admin/language/en-GB/en-GB.com_rsdirectory.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

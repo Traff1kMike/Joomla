@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general" label="COM_RSDIRECTORY_FIELD_PROPERTIES_TAB_GENERAL_LABEL">
+            
+        <field
+            name="name"
+            type="text"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_NAME_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_NAME_DESC"
+            required="true"
+            filter="cmd"
+            size="30" />
+            
+        <field
+            name="form_caption"
+            type="text"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_FORM_CAPTION_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_FORM_CAPTION_DESC"
+            size="255" />
+            
+        <field
+            name="listing_caption"
+            type="text"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_LISTING_CAPTION_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_LISTING_CAPTION_DESC"
+            size="255" />
+            
+        <field
+            name="display_on_listing_detail"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_DISPLAY_ON_LISTING_DETAIL_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="show_help_tip"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_SHOW_HELP_TIP_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_SHOW_HELP_TIP_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="help_tip"
+            type="textarea"
+            class="input-xxlarge"
+            rows="8"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_HELP_TIP_LABEL" />
+            
+        <field
+            name="show_help_text"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_SHOW_HELP_TEXT_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="help_text_position"
+            type="list"
+            class="help-text"
+            default="block"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_HELP_TEXT_POSITION_LABEL">
+            <option value="block">Block</option>
+            <option value="inline">Inline</option>
+        </field>
+            
+        <field
+            name="help_text"
+            type="textarea"
+            class="help-text input-xxlarge"
+            rows="8"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_HELP_TEXT_LABEL" />
+            
+        <field
+            name="additional_html_attributes"
+            type="text"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_ADDITIONAL_HTML_ATTRIBUTES_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_ADDITIONAL_HTML_ATTRIBUTES_DESC"
+            size="255" />
+            
+        <field
+            name="credits"
+            type="text"
+            default="0"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_CREDITS_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_FILEUPLOAD_CREDITS_DESC"
+            filter="integer"
+            size="10" />
+            
+        <field name="credits_per_file"
+            type="text"
+            default="0"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_CREDITS_PER_FILE_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_CREDITS_PER_FILE_DESC"
+            size="10"
+            filter="integer" />
+            
+        <field
+            name="published"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_PUBLISHED_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="id"
+            type="hidden"
+            default="0"
+            filter="integer" />
+            
+        <field
+            name="field_type_id"
+            type="hidden"
+            default="0"
+            filter="integer" />
+            
+    </fieldset>
+        
+    <fieldset name="searchable" label="COM_RSDIRECTORY_FIELD_PROPERTIES_TAB_SEARCHABLE_LABEL">
+            
+        <field
+            name="searchable_advanced"
+            class="btn-group searchable-advanced"
+            type="radio"
+            default="0"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_SEARCHABLE_ADVANCED_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_SEARCHABLE_ADVANCED_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="searchable_advanced_label"
+            class="searchable-advanced-field"
+            type="text"
+            default="Only entries containing files."
+            label="COM_RSDIRECTORY_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_SEARCHABLE_ADVANCED_FILES_UPLOAD_LABEL_DESC"
+            size="255" />
+            
+    </fieldset>
+        
+    <fieldset name="validation" label="COM_RSDIRECTORY_FIELD_PROPERTIES_TAB_VALIDATION_LABEL">
+            
+        <field
+            name="required"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_REQUIRED_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_REQUIRED_DESC"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="maximum_file_size"
+            type="text"
+            default="5120"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_MAXIMUM_FILE_SIZE_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_MAXIMUM_FILE_SIZE_DESC"
+            filter="integer"
+            size="30" />
+            
+        <field
+            name="max_files_number"
+            type="text"
+            default="1"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_MAX_FILES_NUMBER_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_MAX_FILES_NUMBER_DESC"
+            size="2"
+            filter="integer" />
+            
+        <field
+            name="accepted_files"
+            type="textarea"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_ACCEPTED_FILES_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_ACCEPTED_FILES_DESC" />
+            
+        <field
+            name="validation_message"
+            type="textarea"
+            default="Invalid input."
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_VALIDATION_MESSAGE_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_VALIDATION_MESSAGE_DESC" />
+            
+    </fieldset>
+        
+    <fieldset name="forms" label="COM_RSDIRECTORY_FIELD_PROPERTIES_TAB_FORMS_LABEL">
+            
+        <field
+			name="forms"
+            type="forms"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_FORMS_LABEL"
+            description="COM_RSDIRECTORY_FIELD_PROPERTY_FORMS_DESC" />
+            
+    </fieldset>
+</form>

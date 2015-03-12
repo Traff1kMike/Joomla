@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general" addfieldpath="/components/com_rsdirectory/models/fields">
+		<field
+            name="name"
+            type="text"
+            label="COM_RSDIRECTORY_NAME"
+			required="required" />
+			
+		<field
+            name="email"
+            type="text"
+            label="COM_RSDIRECTORY_EMAIL"
+			validate="email"
+			required="required" />
+			
+		<field
+            name="reason"
+            type="reasons"
+            label="COM_RSDIRECTORY_REASON"
+			required="required">
+			<option value="">COM_RSDIRECTORY_SELECT_REPORT_REASON</option>
+		</field>
+			
+		<field
+            name="message"
+            type="textarea"
+			class="input-xxlarge"
+            label="COM_RSDIRECTORY_MESSAGE"
+            cols="80"
+			rows="8" />
+			
+	</fieldset>
+</form>

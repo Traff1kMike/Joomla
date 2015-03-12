@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>Visia Article Portfolio</name>
+	<author>Erwin Schro</author>
+	<creationDate>Oct 2013</creationDate>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>erwin@joomla-labs.com</authorEmail>
+	<authorUrl>www.joomla-labs.com</authorUrl>
+	<version>3.0.0</version>
+	<description>MOD_VISIAFOLIO_XML_DESC</description>
+	<files>
+		<filename module="mod_visiafolio">mod_visiafolio.php</filename>
+		<filename>helper.php</filename>
+		<filename>image.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_visiafolio.sys.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_visiafolio.ini</language>
+	</languages>
+			
+	<config>
+		<fields name="params">
+			
+			<fieldset name="basic">
+				
+				<field name="count" type="text" default="6" label="MOD_VISIAFOLIO_COUNT_LABEL" description="MOD_VISIAFOLIO_COUNT_DESC" />
+
+				<field name="show_front" type="radio" default="show"
+					label="MOD_ARTICLES_CATEGORY_FIELD_SHOWFEATURED_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_SHOWFEATURED_DESC">
+					<option value="show">JSHOW</option>
+					<option value="hide">JHIDE</option>
+					<option value="only">MOD_ARTICLES_CATEGORY_OPTION_ONLYFEATURED_VALUE</option>
+				</field>
+
+				
+				<field name="filteringspacer1" type="spacer" hr="true" />
+
+				<field name="category_filtering_type" type="radio"
+					default="1"
+					label="MOD_ARTICLES_CATEGORY_FIELD_CATFILTERINGTYPE_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_CATFILTERINGTYPE_DESC">
+					<option value="1">MOD_ARTICLES_CATEGORY_OPTION_INCLUSIVE_VALUE</option>
+					<option value="0">MOD_ARTICLES_CATEGORY_OPTION_EXCLUSIVE_VALUE</option>
+				</field>
+
+				<field name="catid" type="category" extension="com_content"
+					multiple="true" size="5"
+					label="JCATEGORY"
+					description="MOD_ARTICLES_CATEGORY_FIELD_CATEGORY_DESC">
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+
+				<field name="show_child_category_articles" type="radio"
+					default="0"
+					label="MOD_ARTICLES_CATEGORY_FIELD_SHOWCHILDCATEGORYARTICLES_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_SHOWCHILDCATEGORYARTICLES_DESC">
+					<option value="1">MOD_ARTICLES_CATEGORY_OPTION_INCLUDE_VALUE</option>
+					<option value="0">MOD_ARTICLES_CATEGORY_OPTION_EXCLUDE_VALUE</option>
+				</field>
+
+				<field name="levels" type="text" default="1"
+					label="MOD_ARTICLES_CATEGORY_FIELD_CATDEPTH_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_CATDEPTH_DESC" />
+
+				<field name="filteringspacer2" type="spacer" hr="true" />
+
+				<field name="author_filtering_type" type="radio"
+					default="1"
+					label="MOD_ARTICLES_CATEGORY_FIELD_AUTHORFILTERING_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_AUTHORFILTERING_DESC">
+					<option value="1">MOD_ARTICLES_CATEGORY_OPTION_INCLUSIVE_VALUE</option>
+					<option value="0">MOD_ARTICLES_CATEGORY_OPTION_EXCLUSIVE_VALUE</option>
+				</field>
+
+				<field name="created_by" type="sql"
+					multiple="true" size="5"
+					label="MOD_ARTICLES_CATEGORY_FIELD_AUTHOR_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_AUTHOR_DESC"
+					query="select id, name, username from #__users where id IN (select distinct(created_by) from #__content) order by name ASC"
+					key_field="id" value_field="name">
+					<option value="">JOPTION_SELECT_AUTHORS</option>
+				</field>
+
+				<field name="filteringspacer3" type="spacer" hr="true" />
+
+				<field name="author_alias_filtering_type" type="radio"
+					default="1"
+					label="MOD_ARTICLES_CATEGORY_FIELD_AUTHORALIASFILTERING_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_AUTHORALIASFILTERING_DESC">
+					<option value="1">MOD_ARTICLES_CATEGORY_OPTION_INCLUSIVE_VALUE</option>
+					<option value="0">MOD_ARTICLES_CATEGORY_OPTION_EXCLUSIVE_VALUE</option>
+				</field>
+
+				<field name="created_by_alias" type="sql"
+					multiple="true" size="5"
+					label="MOD_ARTICLES_CATEGORY_FIELD_AUTHORALIAS_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_AUTHORALIAS_DESC"
+					query="select distinct(created_by_alias) from #__content where created_by_alias != '' order by created_by_alias ASC"
+					key_field="created_by_alias" value_field="created_by_alias">
+					<option value="">JOPTION_SELECT_AUTHOR_ALIASES</option>
+				</field>
+
+				<field name="filteringspacer4" type="spacer" hr="true" />
+
+				<field name="excluded_articles" type="textarea"
+					cols="10" rows="3"
+					label="MOD_ARTICLES_CATEGORY_FIELD_EXCLUDEDARTICLES_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_EXCLUDEDARTICLES_DESC" />
+
+				<field name="filteringspacer5" type="spacer" hr="true" />
+
+				
+				<field name="date_filtering" type="radio" default="off"
+					label="MOD_ARTICLES_CATEGORY_FIELD_DATEFILTERING_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_DATEFILTERING_DESC">
+					<option value="off">MOD_ARTICLES_CATEGORY_OPTION_OFF_VALUE</option>
+					<option value="range">MOD_ARTICLES_CATEGORY_OPTION_DATERANGE_VALUE</option>
+					<option value="relative">MOD_ARTICLES_CATEGORY_OPTION_RELATIVEDAY_VALUE</option>
+				</field>
+
+				<field name="date_field" type="list" default="a.created"
+					label="MOD_ARTICLES_CATEGORY_FIELD_DATERANGEFIELD_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_DATERANGEFIELD_DESC">
+					<option value="a.created">MOD_ARTICLES_CATEGORY_OPTION_CREATED_VALUE</option>
+					<option value="a.modified">MOD_ARTICLES_CATEGORY_OPTION_MODIFIED_VALUE</option>
+					<option value="a.publish_up">MOD_ARTICLES_CATEGORY_OPTION_STARTPUBLISHING_VALUE</option>
+				</field>
+
+				<field name="start_date_range" type="calendar"
+					format="%Y-%m-%d %H:%M:%S"
+					label="MOD_ARTICLES_CATEGORY_FIELD_STARTDATE_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_STARTDATE_DESC"
+					size="22"
+					filter="user_utc" />
+
+				<field name="end_date_range" type="calendar"
+					format="%Y-%m-%d %H:%M:%S"
+					label="MOD_ARTICLES_CATEGORY_FIELD_ENDDATE_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_ENDDATE_DESC"
+					size="22"
+					filter="user_utc" />
+
+				<field name="relative_date" type="text" default="30"
+					label="MOD_ARTICLES_CATEGORY_FIELD_RELATIVEDATE_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_RELATIVEDATE_DESC" />
+
+			</fieldset>
+
+			<fieldset name="ordering"
+				label="MOD_ARTICLES_CATEGORY_FIELD_GROUP_ORDERING_LABEL">
+
+				<field name="article_ordering" type="list"
+					default="a.title"
+					label="MOD_ARTICLES_CATEGORY_FIELD_ARTICLEORDERING_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_ARTICLEORDERING_DESC">
+					<option value="a.ordering">MOD_ARTICLES_CATEGORY_OPTION_ORDERING_VALUE</option>
+					<option value="fp.ordering">MOD_ARTICLES_CATEGORY_OPTION_ORDERINGFEATURED_VALUE</option>
+					<option value="a.hits">MOD_ARTICLES_CATEGORY_OPTION_HITS_VALUE</option>
+					<option value="a.title">JGLOBAL_TITLE</option>
+					<option value="a.id">MOD_ARTICLES_CATEGORY_OPTION_ID_VALUE</option>
+					<option value="a.alias">JFIELD_ALIAS_LABEL</option>
+					<option value="a.created">MOD_ARTICLES_CATEGORY_OPTION_CREATED_VALUE</option>
+					<option value="modified">MOD_ARTICLES_CATEGORY_OPTION_MODIFIED_VALUE</option>
+					<option value="publish_up">MOD_ARTICLES_CATEGORY_OPTION_STARTPUBLISHING_VALUE</option>
+					<option value="a.publish_down">MOD_ARTICLES_CATEGORY_OPTION_FINISHPUBLISHING_VALUE</option>
+				</field>
+
+				<field name="article_ordering_direction" type="list"
+					default="ASC"
+					label="MOD_ARTICLES_CATEGORY_FIELD_ARTICLEORDERINGDIR_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_ARTICLEORDERINGDIR_DESC">
+					<option value="DESC">MOD_ARTICLES_CATEGORY_OPTION_DESCENDING_VALUE</option>
+					<option value="ASC">MOD_ARTICLES_CATEGORY_OPTION_ASCENDING_VALUE</option>
+				</field>
+			</fieldset>
+				
+				
+					
+			<fieldset name="layout">
+
+				<!--
+				<field name="mode" type="radio" default="" label="MOD_VISIAFOLIO_MODE_LABEL" description="MOD_VISIAFOLIO_MODE_DESC">
+					<option value="portfolio">Portfolio</option>
+					<option value="miniart">Mini Articles</option>
+				</field>
+				-->
+
+				<!--<field name="column" type="text" default="4" label="MOD_VISIAFOLIO_COLUMN_LABEL" description="MOD_VISIAFOLIO_COLUMN_DESC" />-->
+				
+				<!--<field name="filteringspacer6" type="spacer" hr="true" />-->
+
+				<!--
+				<field name="tagline" type="text" default="" label="MOD_VISIAFOLIO_TAGLINE_LABEL" description="MOD_VISIAFOLIO_TAGLINE_DESC" />
+				<field name="desc" type="text" default="" label="MOD_VISIAFOLIO_DESC_LABEL" description="MOD_VISIAFOLIO_DESC_DESC" />
+				-->
+				
+				
+				
+				<field name="show_filter" type="radio" default="1" label="MOD_VISIAFOLIO_FILTER_LABEL" description="MOD_VISIAFOLIO_FILTER_DESC">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field name="filteringspacer7" type="spacer" hr="true" />
+
+				<field name="show_title" type="radio" default="1" label="MOD_VISIAFOLIO_SHOWTITLE_LABEL" description="MOD_VISIAFOLIO_SHOWTITLE_DESC">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				<field name="show_category" type="radio" default="1" label="MOD_VISIAFOLIO_SHOWCAT_LABEL" description="MOD_VISIAFOLIO_SHOWCAT_DESC">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field name="show_date" type="radio" default="0"
+					label="JDATE"
+					description="MOD_ARTICLES_CATEGORY_FIELD_SHOWDATE_DESC"
+				>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field name="show_date_field" type="list" default="created"
+					label="MOD_ARTICLES_CATEGORY_FIELD_DATEFIELD_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_DATEFIELD_DESC"
+				>
+					<option value="created">MOD_ARTICLES_CATEGORY_OPTION_CREATED_VALUE
+					</option>
+					<option value="modified">MOD_ARTICLES_CATEGORY_OPTION_MODIFIED_VALUE
+					</option>
+					<option value="publish_up">MOD_ARTICLES_CATEGORY_OPTION_STARTPUBLISHING_VALUE
+					</option>
+				</field>
+
+				<field name="show_date_type" type="list"
+					default="6"
+					label="MOD_ARTICLES_CATEGORY_FIELD_DATEFIELDFORMAT_LABEL"
+					description="MOD_ARTICLES_CATEGORY_FIELD_DATEFIELDFORMAT_DESC">
+					<option value="0">MOD_VISIAFOLIO_DATETYPE_LC1</option>
+					<option value="1">MOD_VISIAFOLIO_DATETYPE_LC2</option>
+					<option value="2">MOD_VISIAFOLIO_DATETYPE_LC3</option>
+					<option value="3">MOD_VISIAFOLIO_DATETYPE_TIMEONLY</option>
+					<option value="4">MOD_VISIAFOLIO_DATETYPE_SHORTFULLDATE</option>
+					<option value="5">MOD_VISIAFOLIO_DATETYPE_LONGFULLDATETIME</option>
+					<option value="6">MOD_VISIAFOLIO_DATETYPE_SHORTDATE</option>
+				</field>
+				
+				<field name="show_introtext" type="radio" default="0" label="MOD_VISIAFOLIO_SHOWINTROTEXT_LABEL" description="MOD_VISIAFOLIO_SHOWINTROTEXT_DESC">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field name="introtext_limit" type="text" default="200" label="MOD_VISIAFOLIO_LIMITINTRO_LABEL" description="MOD_VISIAFOLIO_LIMITINTRO_DESC" />
+				
+				<field name="show_thumb" type="radio" default="" label="MOD_VISIAFOLIO_SHOWTHUMB_LABEL" description="MOD_VISIAFOLIO_SHOWTHUMB_DESC">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				<field name="thumb_width" type="text" default="" label="MOD_VISIAFOLIO_THUMBWIDTH_LABEL" description="MOD_VISIAFOLIO_THUMBWIDTH_DESC" />
+				<field name="thumb_height" type="text" default="" label="MOD_VISIAFOLIO_THUMBHEIGHT_LABEL" description="MOD_VISIAFOLIO_THUMBHEIGHT_DESC" />
+				
+				<field name="thumb_option" type="list" default="crop" label="MOD_VISIAFOLIO_THUMBOPTION_LABEL" description="MOD_VISIAFOLIO_THUMBOPTION_DESC">
+					<option value="crop">Crop</option>
+					<!--
+					<option value="exact">Exact</option>
+					<option value="portrait">Portrait</option>
+					<option value="landscape">Landscape</option>
+					<option value="auto">Auto</option>
+					<option value="topleft">Top Left</option>
+					<option value="center">Center</option>
+					-->
+				</field>
+
+			</fieldset>
+
+			<fieldset name="advanced">
+				
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

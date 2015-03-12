@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="regenerate_titles" addfieldpath="/administrator/components/com_rsdirectory/models/fields">
+            
+        <field
+            type="checkboxes"
+            name="checkall_regenerate_titles_forms"
+            label="">
+			<option value="0" class="checkbox">JGLOBAL_CHECK_ALL</option>
+		</field>
+            
+        <field
+            type="forms"
+			name="regenerate_titles_forms"
+            label="COM_RSDIRECTORY_REGENERATE_TITLES_SELECT_FORMS_LABEL"
+            description="COM_RSDIRECTORY_REGENERATE_TITLES_SELECT_FORMS_DESC"
+            filter="integer" />
+            
+        <field
+            type="checkboxes"
+            name="checkall_regenerate_titles_elements"
+            label="">
+			<option value="0" class="checkbox">JGLOBAL_CHECK_ALL</option>
+		</field>
+            
+        <field
+            type="checkboxes"
+			name="regenerate_titles_elements"
+            label="COM_RSDIRECTORY_REGENERATE_TITLES_ELEMENTS_LABEL"
+            description="COM_RSDIRECTORY_REGENERATE_TITLES_ELEMENTS_DESC">
+            <option value="title" class="checkbox">COM_RSDIRECTORY_FIELDS_TITLE</option>
+            <option value="big_subtitle" class="checkbox">COM_RSDIRECTORY_FIELDS_BIG_SUBTITLE</option>
+            <option value="small_subtitle" class="checkbox">COM_RSDIRECTORY_FIELDS_SMALL_SUBTITLE</option>
+            <option value="description" class="checkbox">COM_RSDIRECTORY_FIELDS_DESCRIPTION</option>
+        </field>
+            
+    </fieldset>
+		
+	<fieldset name="restore">
+			
+		<field
+            type="list"
+			name="restore_from"
+            label="COM_RSDIRECTORY_RESTORE_FROM_LABEL">
+            <option value="uploaded_archive">COM_RSDIRECTORY_RESTORE_FROM_UPLOADED_ARCHIVE</option>
+			<option value="local_archive">COM_RSDIRECTORY_RESTORE_FROM_LOCAL_ARCHIVE</option>
+			<option value="url">COM_RSDIRECTORY_RESTORE_FROM_URL</option>
+        </field>
+			
+		<field
+			type="file"
+			name="restore_uploaded_archive"
+			label="COM_RSDIRECTORY_RESTORE_ARCHIVE_LABEL" />
+			
+		<field
+			type="text"
+			name="restore_local_archive"
+			label="COM_RSDIRECTORY_RESTORE_LOCAL_ARCHIVE_LABEL" />
+			
+		<field
+			type="url"
+			name="restore_url"
+			label="COM_RSDIRECTORY_RESTORE_URL_LABEL" />
+			
+		<field
+            type="checkboxes"
+			name="restore_confirm"
+            label="">
+            <option value="1" class="checkbox">COM_RSDIRECTORY_RESTORE_CONFIRMATION</option>
+        </field>
+			
+	</fieldset>
+</form>

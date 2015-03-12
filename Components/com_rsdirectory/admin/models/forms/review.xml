@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general" addfieldpath="/administrator/components/com_rsdirectory/models/fields">
+            
+        <field
+            name="entry_id"
+            type="modal_entry"
+            label="COM_RSDIRECTORY_FIELD_SELECT_ENTRY_LABEL"
+            description="COM_RSDIRECTORY_FIELD_SELECT_ENTRY_DESC" />
+            
+        <field
+            name="user_id"
+            type="user"
+            label="COM_RSDIRECTORY_REVIEW_AUTHOR"
+            filter="integer" />
+            
+        <field
+            name="score"
+            type="rating"
+            label="COM_RSDIRECTORY_RATING"
+            filter="integer" />
+            
+        <field
+            name="name"
+            type="text"
+            label="COM_RSDIRECTORY_NAME"
+            size="255" />
+            
+        <field
+            name="email"
+            type="text"
+            label="COM_RSDIRECTORY_EMAIL"
+            size="255" />
+            
+        <field
+            name="subject"
+            type="text"
+            label="COM_RSDIRECTORY_SUBJECT"
+            size="255" />
+            
+        <field
+            name="review"
+            type="textarea"
+            class="input-xxlarge"
+            rows="8"
+            label="COM_RSDIRECTORY_REVIEW"
+            size="255" />
+            
+        <field
+            name="owner_reply"
+            type="editor"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_OWNER_REPLY_LABEL"
+            filter="JComponentHelper::filterText" />
+            
+        <field
+            name="published"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="JPUBLISHED"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="id"
+            type="hidden"
+            default="0"
+            filter="integer" />
+            
+    </fieldset>
+</form>

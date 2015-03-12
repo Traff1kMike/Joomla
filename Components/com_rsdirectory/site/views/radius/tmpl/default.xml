@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_RSDIRECTORY_RADIUS_SEARCH_VIEW_DEFAULT_TITLE" >
+		<message>
+			<![CDATA[COM_RSDIRECTORY_RADIUS_SEARCH_VIEW_DEFAULT_DESC]]>
+		</message>
+    </layout>
+        
+    <!-- Add fields to the parameters object for the layout. -->
+    <fields name="params">
+            
+		<fieldset name="basic">
+				
+			<field
+				name="itemid"
+				type="text"
+				label="COM_RSDIRECTORY_CUSTOM_ITEMID_LABEL"
+				description="COM_RSDIRECTORY_RADIUS_SEARCH_CUSTOM_ITEMID_DESC" />
+				
+		</fieldset>
+			
+		<fieldset name="advanced" label="COM_MENUS_LAYOUT_FEATURED_OPTIONS" addfieldpath="/administrator/components/com_rsdirectory/models/fields">
+				
+			<field
+				name="featured_categories"
+				type="category"
+				extension="com_rsdirectory"
+				multiple="true"
+				size="10"
+				default=""
+				label="COM_RSDIRECTORY_FEATURED_CATEGORIES_LABEL"
+				description="COM_RSDIRECTORY_FEATURED_CATEGORIES_DESC" >
+				<option value="">JOPTION_ALL_CATEGORIES</option>
+			</field>
+				
+			<field
+				name="fields"
+				type="maps"
+				multiple="true"
+				size="10"
+				default=""
+				label="COM_RSDIRECTORY_MAP_FIELDS_LABEL"
+				description="COM_RSDIRECTORY_MAP_FIELDS_DESC" >
+				<option value="">COM_RSDIRECTORY_ALL_MAP_FIELDS</option>
+			</field>
+				
+			<field
+				name="default_location"
+				type="text"
+				default="Statue of Liberty National Monument, New York, NY 10004, United States"
+				label="COM_RSDIRECTORY_DEFAULT_LOCATION_LABEL"
+				description="COM_RSDIRECTORY_DEFAULT_LOCATION_DESC" />
+				
+			<field
+				name="default_zoom"
+				type="text"
+				label="COM_RSDIRECTORY_DEFAULT_ZOOM_LABEL"
+				filter="integer" />
+				
+			<field
+				name="width"
+				type="text"
+				default="100%"
+				label="COM_RSDIRECTORY_MAP_WIDTH_LABEL"
+				description="COM_RSDIRECTORY_MAP_WIDTH_DESC" />
+				
+			<field
+				name="height"
+				type="text"
+				default="300"
+				label="COM_RSDIRECTORY_MAP_HEIGHT_LABEL"
+				filter="integer" />
+				
+			<field
+				name="filtering"
+				type="radio"
+				class="btn-group"
+				default="1"
+				label="COM_RSDIRECTORY_FILTERING_LABEL"
+				description="COM_RSDIRECTORY_FILTERING_DESC"
+				filter="integer">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+				
+			<field
+				name="more"
+				type="text"
+				default="5"
+				label="COM_RSDIRECTORY_FILTERING_MORE_LABEL"
+				description="COM_RSDIRECTORY_FILTERING_MORE_DESC"
+				filter="integer" />
+				
+			<field
+				name="info_window_width"
+				type="text"
+				default="300"
+				label="COM_RSDIRECTORY_INFO_WINDOW_WIDTH_LABEL"
+				description="COM_RSDIRECTORY_INFO_WINDOW_WIDTH_DESC"
+				filter="integer" />
+				
+			<field
+				name="info_window_height"
+				type="text"
+				default="120"
+				label="COM_RSDIRECTORY_INFO_WINDOW_HEIGHT_LABEL"
+				description="COM_RSDIRECTORY_INFO_WINDOW_HEIGHT_DESC"
+				filter="integer" />
+				
+			<field
+				name="show_price"
+				type="radio"
+				class="btn-group"
+				default="1"
+				label="COM_RSDIRECTORY_SHOW_PRICE_LABEL"
+				filter="integer">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+				
+			<field
+				name="show_title"
+				type="radio"
+				class="btn-group"
+				default="1"
+				label="COM_RSDIRECTORY_SHOW_TITLE_LABEL"
+				description="COM_RSDIRECTORY_SHOW_TITLE_DESC"
+				filter="integer">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+				
+			<field
+				name="show_thumbnails"
+				type="radio"
+				class="btn-group"
+				default="1"
+				label="COM_RSDIRECTORY_SHOW_THUMBNAILS_LABEL"
+				filter="integer">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+				
+			<field
+				name="thumbnails_width"
+				type="text"
+				default="100"
+				label="COM_RSDIRECTORY_SUBCATEGORIES_THUMBNAILS_WIDTH_LABEL"
+				description="COM_RSDIRECTORY_SUBCATEGORIES_THUMBNAILS_WIDTH_DESC"
+				filter="integer" />
+				
+			<field
+				name="thumbnails_height"
+				type="text"
+				default="100"
+				label="COM_RSDIRECTORY_SUBCATEGORIES_THUMBNAILS_HEIGHT_LABEL"
+				description="COM_RSDIRECTORY_SUBCATEGORIES_THUMBNAILS_HEIGHT_DESC"
+				filter="integer" />
+				
+			<field
+				name="show_ratings"
+				type="radio"
+				class="btn-group"
+				default="1"
+				label="COM_RSDIRECTORY_SHOW_RATINGS_LABEL"
+				filter="integer">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+				
+			<field
+				name="show_favorites_button"
+				type="radio"
+				class="btn-group"
+				default="1"
+				label="COM_RSDIRECTORY_SHOW_FAVORITES_BUTTON_LABEL"
+				filter="integer">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+				
+		</fieldset>
+			
+	</fields>
+		
+</metadata>

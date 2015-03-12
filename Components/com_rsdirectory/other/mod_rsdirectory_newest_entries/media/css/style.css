@@ -1,0 +1,29 @@
+.rsdir-newest-entries {
+    margin-bottom: 12px;
+}
+
+.rsdir-newest-entries.vertical .rsdir-newest-entry {
+    margin-bottom: 10px;
+}
+
+.rsdir-newest-entries .thumbnail {
+    display: inline-block;
+}
+
+.rsdir-newest-entry-body.body-top {
+    margin-bottom: 10px;
+}
+
+.rsdir-newest-entry-price {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.rsdir-newest-entry-title {
+    display: block;
+}
+
+.rsdir-newest-entries .rsdir-no-image {
+    background: no-repeat center center #FBFBF1;
+    display: block;
+}

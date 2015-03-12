@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="group">
+            
+        <field
+            name="name"
+            type="text"
+            label="COM_RSDIRECTORY_NAME"
+            required="true" />
+            
+        <field
+            name="jgroups"
+            type="rsusergroup"
+            multiple="multiple"
+            size="10"
+            required="true"
+            label="COM_RSDIRECTORY_SELECT_USER_GROUP_LABEL" />
+            
+        <field
+            name="can_add_entries"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_CAN_ADD_ENTRIES_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="add_entry_captcha"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_ENABLE_ADD_ENTRY_FORM_CAPTCHA_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="can_edit_all_entries"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_CAN_EDIT_ALL_ENTRIES_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="can_edit_own_entries"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_CAN_EDIT_OWN_ENTRIES_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="can_delete_all_entries"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_CAN_DELETE_ALL_ENTRIES_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="can_delete_own_entries"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_CAN_DELETE_OWN_ENTRIES_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="can_view_all_unpublished_entries"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_CAN_VIEW_ALL_UPUBLISHED_ENTRIES_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="can_view_own_unpublished_entries"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_CAN_VIEW_OWN_UPUBLISHED_ENTRIES_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="auto_publish_entries"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_AUTO_PUBLISH_ENTRIES_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="can_cast_votes"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_CAN_CAST_VOTES_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="can_post_reviews"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_CAN_POST_REVIEWS_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="can_vote_own_entries"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_CAN_VOTE_OWN_ENTRIES_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="auto_publish_reviews"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_AUTO_PUBLISH_REVIEWS_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="can_contact_entries_authors"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_CAN_CONTACT_ENTRIES_AUTHORS_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="contact_captcha"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_ENABLE_CONTACT_FORM_CAPTCHA_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="published"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_PUBLISHED_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="id"
+            type="hidden"
+            default="0"
+            filter="integer" />
+            
+    </fieldset>
+</form>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+            
+        <field
+            name="unlimited_credits"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_RSDIRECTORY_USER_UNLIMITED_CREDITS_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="credits"
+            type="text"
+            label="COM_RSDIRECTORY_USER_CREDITS_LABEL"
+            size="255"
+            filter="integer" />
+            
+        <field
+            name="enable_contact_form"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_ENABLE_CONTACT_FORM_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="user_id"
+            type="hidden"
+            filter="integer" />
+            
+    </fieldset>
+</form>

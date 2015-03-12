@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_RSDIRECTORY_MYACCOUNT_VIEW_DEFAULT_TITLE" >
+		<message>
+			<![CDATA[COM_RSDIRECTORY_MYACCOUNT_VIEW_DEFAULT_DESC]]>
+		</message>
+    </layout>
+         
+    <!-- Add fields to the parameters object for the layout. -->
+    <fields name="params">
+		<fieldset name="basic">
+			<field name="itemid" type="text" label="COM_RSDIRECTORY_CUSTOM_ITEMID_LABEL" description="COM_RSDIRECTORY_MY_ACCOUNT_CUSTOM_ITEMID_DESC" />
+		</fieldset>
+		<fieldset name="advanced" label="COM_MENUS_LAYOUT_FEATURED_OPTIONS">
+			<field
+				name="show_pagination"
+				type="list"         
+				description="JGLOBAL_PAGINATION_DESC"
+				label="JGLOBAL_PAGINATION_LABEL">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+				<option value="2">JGLOBAL_AUTO</option>
+			</field>
+				
+			<field
+				name="show_pagination_results"
+				type="list"
+				label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+				description="JGLOBAL_PAGINATION_RESULTS_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+		</fieldset>
+    </fields>
+</metadata>

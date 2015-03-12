@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+		<field
+            name="name"
+            type="text"
+            label="COM_RSDIRECTORY_NAME"
+			required="true" />
+			
+		<field
+            name="email"
+            type="text"
+            label="COM_RSDIRECTORY_EMAIL"
+			required="true"
+			validate="email" />
+			
+		<field
+            name="message"
+            type="textarea"
+			class="input-xxlarge"
+            label="COM_RSDIRECTORY_MESSAGE"
+            cols="80"
+			rows="8"
+			required="true" />
+			
+	</fieldset>
+</form>

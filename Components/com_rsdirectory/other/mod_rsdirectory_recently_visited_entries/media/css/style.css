@@ -1,0 +1,29 @@
+.rsdir-recently-visited-entries {
+    margin-bottom: 12px;
+}
+
+.rsdir-recently-visited-entries.vertical .rsdir-recently-visited-entry {
+    margin-bottom: 10px;
+}
+
+.rsdir-recently-visited-entries .thumbnail {
+    display: inline-block;
+}
+
+.rsdir-recently-visited-entry-body.body-top {
+    margin-bottom: 10px;
+}
+
+.rsdir-recently-visited-entry-price {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.rsdir-recently-visited-entry-title {
+    display: block;
+}
+
+.rsdir-recently-visited-entries .rsdir-no-image {
+    background: no-repeat center center #FBFBF1;
+    display: block;
+}

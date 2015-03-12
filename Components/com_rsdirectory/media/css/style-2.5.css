@@ -1,0 +1,39 @@
+.rsdir .btn {
+    color: #333333;
+}
+
+.rsdir .btn-primary,
+.rsdir .btn-danger,
+.rsdir .badge,
+.rsdir .label {
+    color: #fff;
+}
+
+.rsdir .nav {
+    list-style-type: none !important;
+    padding: 0 !important;
+}
+
+.rsdir .ui-datepicker-trigger img {
+    margin: 2px auto !important;
+}
+
+.rsdir .rsdir-entry-fav i {
+    margin: 3px auto !important;
+}
+
+.rsdir .thumbnail {
+    margin-bottom: 9px;
+}
+
+.thumbnail.pull-left {
+    margin: 0 10px 10px 0;
+}
+
+.thumbnail.pull-right {
+    margin: 0 0 10px 10px;
+}
+
+.rsdir form {
+    overflow: hidden;
+}

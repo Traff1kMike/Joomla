@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade" client="site">
+    <name>mod_rsdirectory_credits</name>
+    <creationDate>March 2014</creationDate>
+    <author>RSJoomla!</author>
+    <copyright>(C) 2013-2014 www.rsjoomla.com</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license> 
+    <authorEmail>suport@rsjoomla.com</authorEmail>
+    <authorUrl>http://www.rsjoomla.com</authorUrl>
+    <version>1.0.2</version>
+    <description>MOD_RSDIRECTORY_CREDITS_XML_DESCRIPTION</description>
+        
+    <files>
+		<filename module="mod_rsdirectory_credits">mod_rsdirectory_credits.php</filename>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+    </files>
+        
+    <languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rsdirectory_credits.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rsdirectory_credits.sys.ini</language>
+    </languages>
+        
+    <config>
+		<fields name="params">
+				
+			<fieldset name="basic">
+					
+				<field
+					name="itemid"
+					type="text"
+					label="MOD_RSDIRECTORY_CREDITS_CUSTOM_ITEMID_LABEL"
+					description="MOD_RSDIRECTORY_CREDITS_CUSTOM_ITEMID_DESC" />
+					
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="MOD_RSDIRECTORY_CREDITS_CLASS_SUFFIX_LABEL"
+					description="MOD_RSDIRECTORY_CREDITS_CLASS_SUFFIX_DESC" />
+					
+			</fieldset>
+				
+		</fields>
+    </config>
+</extension>

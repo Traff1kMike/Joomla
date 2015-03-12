@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="creditpackage">
+            
+        <field
+            name="title"
+            type="text"
+            label="COM_RSDIRECTORY_CREDIT_PACKAGE_TITLE_LABEL"
+            required="true"
+            size="255" />
+            
+        <field
+            name="description"
+            type="editor"
+            label="COM_RSDIRECTORY_CREDIT_PACKAGE_DESCRIPTION_LABEL"
+            filter="JComponentHelper::filterText" />
+            
+        <field
+            name="price"
+            type="text"
+            default="0"
+            label="COM_RSDIRECTORY_CREDIT_PACKAGE_PRICE_LABEL"
+            filter="float"
+            size="10" />
+            
+        <field
+            name="credits"
+            type="text"
+            default="0"
+            label="COM_RSDIRECTORY_CREDIT_PACKAGE_CREDITS_LABEL"
+            description="COM_RSDIRECTORY_CREDIT_PACKAGE_CREDITS_DESC"
+            filter="integer"
+            size="10" />
+            
+        <field
+            name="published"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_RSDIRECTORY_FIELD_PROPERTY_PUBLISHED_LABEL"
+            filter="integer">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+            
+        <field
+            name="id"
+            type="hidden"
+            default="0"
+            filter="integer" />
+            
+    </fieldset>
+</form>
